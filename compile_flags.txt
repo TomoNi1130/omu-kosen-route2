@@ -1,0 +1,4 @@
+-std=c++17
+-I/home/jaga/Documents/jikken3/omu-kosen-route2/.venv/lib/python3.12/site-packages/pybind11/include
+-I/usr/include/python3.12
+-I/usr/include

@@ -1,0 +1,1659 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-25T03:19:38.854090+00:00",
+  "service_day": "weekend",
+  "service_date": "20260530",
+  "line": "京阪電車",
+  "direction": "寝屋川市発 門真市方面",
+  "source_url": "https://ekitan.com/timetable/railway/line-station/366-16/d1?dt=20260530",
+  "transfer_source_url": "https://ekitan.com/timetable/railway/line-station/366-15/d1?dt=20260530",
+  "trains": [
+    {
+      "departure": "05:17",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 17",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-568-M0501A&dw=&dt=20260530&departure=0517&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "05:20",
+      "transfer_train": {
+        "departure": "05:25",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 25",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-578-R0505B&dw=&dt=20260530&departure=0525&SFF=366-15&d=1",
+        "kayashima_departure": "05:25",
+        "kadoma_arrival": "05:30"
+      }
+    },
+    {
+      "departure": "05:30",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 30",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-575-M0503A&dw=&dt=20260530&departure=0530&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "05:33",
+      "transfer_train": {
+        "departure": "05:36",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 36",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-580-R0507B&dw=&dt=20260530&departure=0536&SFF=366-15&d=1",
+        "kayashima_departure": "05:36",
+        "kadoma_arrival": "05:41"
+      }
+    },
+    {
+      "departure": "05:41",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 41",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-577-M0505A&dw=&dt=20260530&departure=0541&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "05:45",
+      "transfer_train": {
+        "departure": "05:52",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-581-R0509B&dw=&dt=20260530&departure=0552&SFF=366-15&d=1",
+        "kayashima_departure": "05:52",
+        "kadoma_arrival": "05:57"
+      }
+    },
+    {
+      "departure": "05:57",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 57",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-567-K0501A&dw=&dt=20260530&departure=0557&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "06:00",
+      "transfer_train": {
+        "departure": "06:03",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 03",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-582-R0511B&dw=&dt=20260530&departure=0603&SFF=366-15&d=1",
+        "kayashima_departure": "06:03",
+        "kadoma_arrival": "06:08"
+      }
+    },
+    {
+      "departure": "06:07",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 07",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-579-M0507A&dw=&dt=20260530&departure=0607&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "06:10",
+      "transfer_train": {
+        "departure": "06:16",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 16",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-583-R0601B&dw=&dt=20260530&departure=0616&SFF=366-15&d=1",
+        "kayashima_departure": "06:16",
+        "kadoma_arrival": "06:21"
+      }
+    },
+    {
+      "departure": "06:20",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 20",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-576-K0503A&dw=&dt=20260530&departure=0620&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "06:24",
+      "transfer_train": {
+        "departure": "06:27",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 27",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-592-R0603B&dw=&dt=20260530&departure=0627&SFF=366-15&d=1",
+        "kayashima_departure": "06:27",
+        "kadoma_arrival": "06:32"
+      }
+    },
+    {
+      "departure": "06:30",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 30",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-585-M0601A&dw=&dt=20260530&departure=0630&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "06:34",
+      "transfer_train": {
+        "departure": "06:38",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 38",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-595-R0605B&dw=&dt=20260530&departure=0638&SFF=366-15&d=1",
+        "kayashima_departure": "06:38",
+        "kadoma_arrival": "06:44"
+      }
+    },
+    {
+      "departure": "06:44",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 44",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-570-Q0501B&dw=&dt=20260530&departure=0644&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "06:54"
+    },
+    {
+      "departure": "06:52",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 52",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-590-M0603A&dw=&dt=20260530&departure=0652&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "06:56",
+      "transfer_train": {
+        "departure": "07:00",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 00",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-598-R0607B&dw=&dt=20260530&departure=0700&SFF=366-15&d=1",
+        "kayashima_departure": "07:00",
+        "kadoma_arrival": "07:06"
+      }
+    },
+    {
+      "departure": "07:05",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]屋 05",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-573-Q0503A&dw=&dt=20260530&departure=0705&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "07:16"
+    },
+    {
+      "departure": "07:14",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 14",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-594-M0605A&dw=&dt=20260530&departure=0714&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "07:17",
+      "transfer_train": {
+        "departure": "07:21",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 21",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-606-R0703B&dw=&dt=20260530&departure=0721&SFF=366-15&d=1",
+        "kayashima_departure": "07:21",
+        "kadoma_arrival": "07:26"
+      }
+    },
+    {
+      "departure": "07:26",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 26",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-584-K0601A&dw=&dt=20260530&departure=0726&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "07:29",
+      "transfer_train": {
+        "departure": "07:31",
+        "type": "区急",
+        "destination": null,
+        "label": "[区急]之 31",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-602-P0701B&dw=&dt=20260530&departure=0731&SFF=366-15&d=1",
+        "kayashima_departure": "07:31",
+        "kadoma_arrival": "07:36"
+      }
+    },
+    {
+      "departure": "07:36",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 36",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-601-R0701B&dw=&dt=20260530&departure=0736&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "07:45"
+    },
+    {
+      "departure": "07:42",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 42",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-600-M0701A&dw=&dt=20260530&departure=0742&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "07:46",
+      "transfer_train": {
+        "departure": "07:49",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 49",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-587-Q0601B&dw=&dt=20260530&departure=0749&SFF=366-15&d=1",
+        "kayashima_departure": "07:49",
+        "kadoma_arrival": "07:54"
+      }
+    },
+    {
+      "departure": "07:45",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 45",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-587-Q0601B&dw=&dt=20260530&departure=0745&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "07:54"
+    },
+    {
+      "departure": "07:51",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 51",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-589-K0603A&dw=&dt=20260530&departure=0751&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "07:55",
+      "transfer_train": {
+        "departure": "08:00",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 00",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-613-R0705B&dw=&dt=20260530&departure=0800&SFF=366-15&d=1",
+        "kayashima_departure": "08:00",
+        "kadoma_arrival": "08:05"
+      }
+    },
+    {
+      "departure": "07:55",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 55",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-607-M0703A&dw=&dt=20260530&departure=0755&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "07:59",
+      "transfer_train": {
+        "departure": "08:00",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 00",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-613-R0705B&dw=&dt=20260530&departure=0800&SFF=366-15&d=1",
+        "kayashima_departure": "08:00",
+        "kadoma_arrival": "08:05"
+      }
+    },
+    {
+      "departure": "08:03",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 03",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-612-M0705A&dw=&dt=20260530&departure=0803&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "08:06",
+      "transfer_train": {
+        "departure": "08:13",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 13",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-620-R0801B&dw=&dt=20260530&departure=0813&SFF=366-15&d=1",
+        "kayashima_departure": "08:13",
+        "kadoma_arrival": "08:18"
+      }
+    },
+    {
+      "departure": "08:07",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 07",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-593-K0605A&dw=&dt=20260530&departure=0807&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "08:10",
+      "transfer_train": {
+        "departure": "08:13",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 13",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-620-R0801B&dw=&dt=20260530&departure=0813&SFF=366-15&d=1",
+        "kayashima_departure": "08:13",
+        "kadoma_arrival": "08:18"
+      }
+    },
+    {
+      "departure": "08:16",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 16",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-621-M0801A&dw=&dt=20260530&departure=0816&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "08:19",
+      "transfer_train": {
+        "departure": "08:27",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]屋 27",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-604-Q0701A&dw=&dt=20260530&departure=0827&SFF=366-15&d=1",
+        "kayashima_departure": "08:27",
+        "kadoma_arrival": "08:32"
+      }
+    },
+    {
+      "departure": "08:23",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]屋 23",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-604-Q0701A&dw=&dt=20260530&departure=0823&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "08:32"
+    },
+    {
+      "departure": "08:28",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 28",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-625-M0803A&dw=&dt=20260530&departure=0828&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "08:32",
+      "transfer_train": {
+        "departure": "08:38",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 38",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-609-Q0703B&dw=&dt=20260530&departure=0838&SFF=366-15&d=1",
+        "kayashima_departure": "08:38",
+        "kadoma_arrival": "08:44"
+      }
+    },
+    {
+      "departure": "08:34",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 34",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-609-Q0703B&dw=&dt=20260530&departure=0834&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "08:44"
+    },
+    {
+      "departure": "08:41",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]之 41",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-599-K0701B&dw=&dt=20260530&departure=0841&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "08:44",
+      "transfer_train": {
+        "departure": "08:48",
+        "type": "区急",
+        "destination": null,
+        "label": "[区急]屋 48",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-619-P0801A&dw=&dt=20260530&departure=0848&SFF=366-15&d=1",
+        "kayashima_departure": "08:48",
+        "kadoma_arrival": "08:53"
+      }
+    },
+    {
+      "departure": "08:53",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 53",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-605-K0703A&dw=&dt=20260530&departure=0853&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "08:57",
+      "transfer_train": {
+        "departure": "09:02",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 02",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-628-R0805B&dw=&dt=20260530&departure=0902&SFF=366-15&d=1",
+        "kayashima_departure": "09:02",
+        "kadoma_arrival": "09:07"
+      }
+    },
+    {
+      "departure": "09:06",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 06",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-611-K0705A&dw=&dt=20260530&departure=0906&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "09:10",
+      "transfer_train": {
+        "departure": "09:14",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 14",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-637-R0901B&dw=&dt=20260530&departure=0914&SFF=366-15&d=1",
+        "kayashima_departure": "09:14",
+        "kadoma_arrival": "09:19"
+      }
+    },
+    {
+      "departure": "09:18",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 18",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-618-K0801A&dw=&dt=20260530&departure=0918&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "09:21",
+      "transfer_train": {
+        "departure": "09:26",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]屋 26",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-641-R0903A&dw=&dt=20260530&departure=0926&SFF=366-15&d=1",
+        "kayashima_departure": "09:26",
+        "kadoma_arrival": "09:31"
+      }
+    },
+    {
+      "departure": "09:28",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 28",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-626-K0803A&dw=&dt=20260530&departure=0928&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "09:31",
+      "transfer_train": {
+        "departure": "09:36",
+        "type": "区急",
+        "destination": null,
+        "label": "[区急]之 36",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-638-P0901B&dw=&dt=20260530&departure=0936&SFF=366-15&d=1",
+        "kayashima_departure": "09:36",
+        "kadoma_arrival": "09:41"
+      }
+    },
+    {
+      "departure": "09:36",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 36",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-645-R0905B&dw=&dt=20260530&departure=0936&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "09:46"
+    },
+    {
+      "departure": "09:44",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 44",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-627-K0805A&dw=&dt=20260530&departure=0944&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "09:47",
+      "transfer_train": {
+        "departure": "09:51",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 51",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-649-R0907B&dw=&dt=20260530&departure=0951&SFF=366-15&d=1",
+        "kayashima_departure": "09:51",
+        "kadoma_arrival": "09:56"
+      }
+    },
+    {
+      "departure": "09:56",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 56",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-631-K0807A&dw=&dt=20260530&departure=0956&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "09:59",
+      "transfer_train": {
+        "departure": "10:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-650-R0909B&dw=&dt=20260530&departure=1004&SFF=366-15&d=1",
+        "kayashima_departure": "10:04",
+        "kadoma_arrival": "10:09"
+      }
+    },
+    {
+      "departure": "09:59",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 59",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-650-R0909B&dw=&dt=20260530&departure=0959&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "10:09"
+    },
+    {
+      "departure": "10:07",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 07",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-632-K0809A&dw=&dt=20260530&departure=1007&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "10:10",
+      "transfer_train": {
+        "departure": "10:16",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 16",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-654-R1001B&dw=&dt=20260530&departure=1016&SFF=366-15&d=1",
+        "kayashima_departure": "10:16",
+        "kadoma_arrival": "10:21"
+      }
+    },
+    {
+      "departure": "10:19",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 19",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-636-K0901A&dw=&dt=20260530&departure=1019&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "10:22",
+      "transfer_train": {
+        "departure": "10:26",
+        "type": "区急",
+        "destination": null,
+        "label": "[区急]之 26",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-657-P1001B&dw=&dt=20260530&departure=1026&SFF=366-15&d=1",
+        "kayashima_departure": "10:26",
+        "kadoma_arrival": "10:31"
+      }
+    },
+    {
+      "departure": "10:36",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 36",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-640-Q0901B&dw=&dt=20260530&departure=1036&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "10:46"
+    },
+    {
+      "departure": "10:44",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 44",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-643-K0903A&dw=&dt=20260530&departure=1044&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "10:48",
+      "transfer_train": {
+        "departure": "10:53",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 53",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-664-R1005B&dw=&dt=20260530&departure=1053&SFF=366-15&d=1",
+        "kayashima_departure": "10:53",
+        "kadoma_arrival": "10:58"
+      }
+    },
+    {
+      "departure": "10:56",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 56",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-644-K0905A&dw=&dt=20260530&departure=1056&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "10:59",
+      "transfer_train": {
+        "departure": "11:05",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 05",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-669-R1007B&dw=&dt=20260530&departure=1105&SFF=366-15&d=1",
+        "kayashima_departure": "11:05",
+        "kadoma_arrival": "11:10"
+      }
+    },
+    {
+      "departure": "11:00",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 00",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-669-R1007B&dw=&dt=20260530&departure=1100&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "11:10"
+    },
+    {
+      "departure": "11:09",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 09",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-648-K0907A&dw=&dt=20260530&departure=1109&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "11:12",
+      "transfer_train": {
+        "departure": "11:17",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 17",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-674-R1101B&dw=&dt=20260530&departure=1117&SFF=366-15&d=1",
+        "kayashima_departure": "11:17",
+        "kadoma_arrival": "11:22"
+      }
+    },
+    {
+      "departure": "11:20",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 20",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-656-K1001A&dw=&dt=20260530&departure=1120&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "11:23",
+      "transfer_train": {
+        "departure": "11:29",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 29",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-676-R1103B&dw=&dt=20260530&departure=1129&SFF=366-15&d=1",
+        "kayashima_departure": "11:29",
+        "kadoma_arrival": "11:34"
+      }
+    },
+    {
+      "departure": "11:32",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 32",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-662-K1003A&dw=&dt=20260530&departure=1132&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "11:36",
+      "transfer_train": {
+        "departure": "11:41",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 41",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-659-Q1001B&dw=&dt=20260530&departure=1141&SFF=366-15&d=1",
+        "kayashima_departure": "11:41",
+        "kadoma_arrival": "11:46"
+      }
+    },
+    {
+      "departure": "11:36",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 36",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-659-Q1001B&dw=&dt=20260530&departure=1136&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "11:46"
+    },
+    {
+      "departure": "11:45",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 45",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-666-K1005A&dw=&dt=20260530&departure=1145&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "11:48",
+      "transfer_train": {
+        "departure": "11:52",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-679-R1105B&dw=&dt=20260530&departure=1152&SFF=366-15&d=1",
+        "kayashima_departure": "11:52",
+        "kadoma_arrival": "11:58"
+      }
+    },
+    {
+      "departure": "11:57",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 57",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-668-K1007A&dw=&dt=20260530&departure=1157&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "12:00",
+      "transfer_train": {
+        "departure": "12:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-687-R1201B&dw=&dt=20260530&departure=1204&SFF=366-15&d=1",
+        "kayashima_departure": "12:04",
+        "kadoma_arrival": "12:10"
+      }
+    },
+    {
+      "departure": "12:09",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 09",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-671-K1101A&dw=&dt=20260530&departure=1209&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "12:12",
+      "transfer_train": {
+        "departure": "12:16",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 16",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-690-R1203B&dw=&dt=20260530&departure=1216&SFF=366-15&d=1",
+        "kayashima_departure": "12:16",
+        "kadoma_arrival": "12:22"
+      }
+    },
+    {
+      "departure": "12:21",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 21",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-677-K1103A&dw=&dt=20260530&departure=1221&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "12:24",
+      "transfer_train": {
+        "departure": "12:28",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 28",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-693-R1205B&dw=&dt=20260530&departure=1228&SFF=366-15&d=1",
+        "kayashima_departure": "12:28",
+        "kadoma_arrival": "12:34"
+      }
+    },
+    {
+      "departure": "12:33",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 33",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-678-K1105A&dw=&dt=20260530&departure=1233&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "12:36",
+      "transfer_train": {
+        "departure": "12:40",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 40",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-698-R1207B&dw=&dt=20260530&departure=1240&SFF=366-15&d=1",
+        "kayashima_departure": "12:40",
+        "kadoma_arrival": "12:46"
+      }
+    },
+    {
+      "departure": "12:45",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 45",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-681-K1107A&dw=&dt=20260530&departure=1245&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "12:48",
+      "transfer_train": {
+        "departure": "12:52",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-700-R1209B&dw=&dt=20260530&departure=1252&SFF=366-15&d=1",
+        "kayashima_departure": "12:52",
+        "kadoma_arrival": "12:58"
+      }
+    },
+    {
+      "departure": "12:57",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 57",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-684-K1109A&dw=&dt=20260530&departure=1257&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "13:00",
+      "transfer_train": {
+        "departure": "13:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-703-R1301B&dw=&dt=20260530&departure=1304&SFF=366-15&d=1",
+        "kayashima_departure": "13:04",
+        "kadoma_arrival": "13:10"
+      }
+    },
+    {
+      "departure": "13:09",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 09",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-685-K1111A&dw=&dt=20260530&departure=1309&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "13:12",
+      "transfer_train": {
+        "departure": "13:16",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 16",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-706-R1303B&dw=&dt=20260530&departure=1316&SFF=366-15&d=1",
+        "kayashima_departure": "13:16",
+        "kadoma_arrival": "13:22"
+      }
+    },
+    {
+      "departure": "13:21",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 21",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-686-K1201A&dw=&dt=20260530&departure=1321&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "13:24",
+      "transfer_train": {
+        "departure": "13:28",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 28",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-707-R1305B&dw=&dt=20260530&departure=1328&SFF=366-15&d=1",
+        "kayashima_departure": "13:28",
+        "kadoma_arrival": "13:34"
+      }
+    },
+    {
+      "departure": "13:33",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 33",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-692-K1203A&dw=&dt=20260530&departure=1333&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "13:36",
+      "transfer_train": {
+        "departure": "13:40",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 40",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-711-R1307B&dw=&dt=20260530&departure=1340&SFF=366-15&d=1",
+        "kayashima_departure": "13:40",
+        "kadoma_arrival": "13:46"
+      }
+    },
+    {
+      "departure": "13:45",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 45",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-695-K1205A&dw=&dt=20260530&departure=1345&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "13:48",
+      "transfer_train": {
+        "departure": "13:52",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-713-R1309B&dw=&dt=20260530&departure=1352&SFF=366-15&d=1",
+        "kayashima_departure": "13:52",
+        "kadoma_arrival": "13:58"
+      }
+    },
+    {
+      "departure": "13:57",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 57",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-697-K1207A&dw=&dt=20260530&departure=1357&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "14:00",
+      "transfer_train": {
+        "departure": "14:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-716-R1401B&dw=&dt=20260530&departure=1404&SFF=366-15&d=1",
+        "kayashima_departure": "14:04",
+        "kadoma_arrival": "14:10"
+      }
+    },
+    {
+      "departure": "14:09",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 09",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-702-K1301A&dw=&dt=20260530&departure=1409&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "14:12",
+      "transfer_train": {
+        "departure": "14:16",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 16",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-720-R1403B&dw=&dt=20260530&departure=1416&SFF=366-15&d=1",
+        "kayashima_departure": "14:16",
+        "kadoma_arrival": "14:22"
+      }
+    },
+    {
+      "departure": "14:21",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 21",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-704-K1303A&dw=&dt=20260530&departure=1421&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "14:24",
+      "transfer_train": {
+        "departure": "14:28",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 28",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-724-R1405B&dw=&dt=20260530&departure=1428&SFF=366-15&d=1",
+        "kayashima_departure": "14:28",
+        "kadoma_arrival": "14:34"
+      }
+    },
+    {
+      "departure": "14:33",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 33",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-708-K1305A&dw=&dt=20260530&departure=1433&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "14:36",
+      "transfer_train": {
+        "departure": "14:40",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 40",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-727-R1407B&dw=&dt=20260530&departure=1440&SFF=366-15&d=1",
+        "kayashima_departure": "14:40",
+        "kadoma_arrival": "14:46"
+      }
+    },
+    {
+      "departure": "14:45",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 45",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-710-K1307A&dw=&dt=20260530&departure=1445&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "14:48",
+      "transfer_train": {
+        "departure": "14:52",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-730-R1409B&dw=&dt=20260530&departure=1452&SFF=366-15&d=1",
+        "kayashima_departure": "14:52",
+        "kadoma_arrival": "14:58"
+      }
+    },
+    {
+      "departure": "14:57",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 57",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-714-K1309A&dw=&dt=20260530&departure=1457&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "15:00",
+      "transfer_train": {
+        "departure": "15:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-732-R1501B&dw=&dt=20260530&departure=1504&SFF=366-15&d=1",
+        "kayashima_departure": "15:04",
+        "kadoma_arrival": "15:10"
+      }
+    },
+    {
+      "departure": "15:09",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 09",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-717-K1401A&dw=&dt=20260530&departure=1509&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "15:12",
+      "transfer_train": {
+        "departure": "15:16",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 16",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-737-R1503B&dw=&dt=20260530&departure=1516&SFF=366-15&d=1",
+        "kayashima_departure": "15:16",
+        "kadoma_arrival": "15:22"
+      }
+    },
+    {
+      "departure": "15:21",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 21",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-721-K1403A&dw=&dt=20260530&departure=1521&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "15:24",
+      "transfer_train": {
+        "departure": "15:28",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 28",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-741-R1505B&dw=&dt=20260530&departure=1528&SFF=366-15&d=1",
+        "kayashima_departure": "15:28",
+        "kadoma_arrival": "15:34"
+      }
+    },
+    {
+      "departure": "15:33",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 33",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-722-K1405A&dw=&dt=20260530&departure=1533&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "15:36",
+      "transfer_train": {
+        "departure": "15:40",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 40",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-743-R1507B&dw=&dt=20260530&departure=1540&SFF=366-15&d=1",
+        "kayashima_departure": "15:40",
+        "kadoma_arrival": "15:46"
+      }
+    },
+    {
+      "departure": "15:45",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 45",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-725-K1407A&dw=&dt=20260530&departure=1545&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "15:48",
+      "transfer_train": {
+        "departure": "15:52",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-745-R1509B&dw=&dt=20260530&departure=1552&SFF=366-15&d=1",
+        "kayashima_departure": "15:52",
+        "kadoma_arrival": "15:58"
+      }
+    },
+    {
+      "departure": "15:56",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 56",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-728-K1409A&dw=&dt=20260530&departure=1556&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "15:59",
+      "transfer_train": {
+        "departure": "16:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-748-R1601B&dw=&dt=20260530&departure=1604&SFF=366-15&d=1",
+        "kayashima_departure": "16:04",
+        "kadoma_arrival": "16:10"
+      }
+    },
+    {
+      "departure": "16:08",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 08",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-731-K1411A&dw=&dt=20260530&departure=1608&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "16:11",
+      "transfer_train": {
+        "departure": "16:15",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 15",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-758-R1603B&dw=&dt=20260530&departure=1615&SFF=366-15&d=1",
+        "kayashima_departure": "16:15",
+        "kadoma_arrival": "16:21"
+      }
+    },
+    {
+      "departure": "16:19",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 19",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-733-K1501A&dw=&dt=20260530&departure=1619&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "16:22",
+      "transfer_train": {
+        "departure": "16:25",
+        "type": "区急",
+        "destination": null,
+        "label": "[区急]屋 25",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-750-P1601A&dw=&dt=20260530&departure=1625&SFF=366-15&d=1",
+        "kayashima_departure": "16:25",
+        "kadoma_arrival": "16:30"
+      }
+    },
+    {
+      "departure": "16:34",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 34",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-735-Q1501B&dw=&dt=20260530&departure=1634&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "16:45"
+    },
+    {
+      "departure": "16:44",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 44",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-738-K1503A&dw=&dt=20260530&departure=1644&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "16:47",
+      "transfer_train": {
+        "departure": "16:52",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-765-R1607B&dw=&dt=20260530&departure=1652&SFF=366-15&d=1",
+        "kayashima_departure": "16:52",
+        "kadoma_arrival": "16:57"
+      }
+    },
+    {
+      "departure": "16:55",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 55",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-742-K1505A&dw=&dt=20260530&departure=1655&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "16:59",
+      "transfer_train": {
+        "departure": "17:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-766-R1609B&dw=&dt=20260530&departure=1704&SFF=366-15&d=1",
+        "kayashima_departure": "17:04",
+        "kadoma_arrival": "17:09"
+      }
+    },
+    {
+      "departure": "17:11",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 11",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-739-Q1503B&dw=&dt=20260530&departure=1711&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "17:22"
+    },
+    {
+      "departure": "17:22",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 22",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-749-K1601A&dw=&dt=20260530&departure=1722&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "17:25",
+      "transfer_train": {
+        "departure": "17:29",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 29",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-771-R1701B&dw=&dt=20260530&departure=1729&SFF=366-15&d=1",
+        "kayashima_departure": "17:29",
+        "kadoma_arrival": "17:34"
+      }
+    },
+    {
+      "departure": "17:37",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 37",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-753-Q1601B&dw=&dt=20260530&departure=1737&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "17:46"
+    },
+    {
+      "departure": "17:44",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 44",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-759-K1603A&dw=&dt=20260530&departure=1744&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "17:47",
+      "transfer_train": {
+        "departure": "17:52",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-774-R1703B&dw=&dt=20260530&departure=1752&SFF=366-15&d=1",
+        "kayashima_departure": "17:52",
+        "kadoma_arrival": "17:57"
+      }
+    },
+    {
+      "departure": "17:56",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 56",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-761-K1605A&dw=&dt=20260530&departure=1756&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "17:59",
+      "transfer_train": {
+        "departure": "18:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-778-R1705B&dw=&dt=20260530&departure=1804&SFF=366-15&d=1",
+        "kayashima_departure": "18:04",
+        "kadoma_arrival": "18:09"
+      }
+    },
+    {
+      "departure": "18:10",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 10",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-763-K1607A&dw=&dt=20260530&departure=1810&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "18:13",
+      "transfer_train": {
+        "departure": "18:17",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 17",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-785-R1801B&dw=&dt=20260530&departure=1817&SFF=366-15&d=1",
+        "kayashima_departure": "18:17",
+        "kadoma_arrival": "18:22"
+      }
+    },
+    {
+      "departure": "18:22",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 22",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-772-K1701A&dw=&dt=20260530&departure=1822&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "18:25",
+      "transfer_train": {
+        "departure": "18:29",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 29",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-790-R1803B&dw=&dt=20260530&departure=1829&SFF=366-15&d=1",
+        "kayashima_departure": "18:29",
+        "kadoma_arrival": "18:34"
+      }
+    },
+    {
+      "departure": "18:33",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 33",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-775-K1703A&dw=&dt=20260530&departure=1833&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "18:36",
+      "transfer_train": {
+        "departure": "18:42",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 42",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-793-R1805B&dw=&dt=20260530&departure=1842&SFF=366-15&d=1",
+        "kayashima_departure": "18:42",
+        "kadoma_arrival": "18:47"
+      }
+    },
+    {
+      "departure": "18:47",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 47",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-779-K1705A&dw=&dt=20260530&departure=1847&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "18:50",
+      "transfer_train": {
+        "departure": "18:55",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 55",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-796-R1807B&dw=&dt=20260530&departure=1855&SFF=366-15&d=1",
+        "kayashima_departure": "18:55",
+        "kadoma_arrival": "19:00"
+      }
+    },
+    {
+      "departure": "18:58",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 58",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-780-K1707A&dw=&dt=20260530&departure=1858&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "19:01",
+      "transfer_train": {
+        "departure": "19:06",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 06",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-800-R1901B&dw=&dt=20260530&departure=1906&SFF=366-15&d=1",
+        "kayashima_departure": "19:06",
+        "kadoma_arrival": "19:11"
+      }
+    },
+    {
+      "departure": "19:09",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 09",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-783-K1709A&dw=&dt=20260530&departure=1909&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "19:12",
+      "transfer_train": {
+        "departure": "19:16",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 16",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-804-R1903B&dw=&dt=20260530&departure=1916&SFF=366-15&d=1",
+        "kayashima_departure": "19:16",
+        "kadoma_arrival": "19:21"
+      }
+    },
+    {
+      "departure": "19:21",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 21",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-787-K1801A&dw=&dt=20260530&departure=1921&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "19:24",
+      "transfer_train": {
+        "departure": "19:29",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 29",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-809-R1905B&dw=&dt=20260530&departure=1929&SFF=366-15&d=1",
+        "kayashima_departure": "19:29",
+        "kadoma_arrival": "19:34"
+      }
+    },
+    {
+      "departure": "19:33",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 33",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-788-K1803A&dw=&dt=20260530&departure=1933&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "19:36",
+      "transfer_train": {
+        "departure": "19:40",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 40",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-811-R1907B&dw=&dt=20260530&departure=1940&SFF=366-15&d=1",
+        "kayashima_departure": "19:40",
+        "kadoma_arrival": "19:45"
+      }
+    },
+    {
+      "departure": "19:45",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 45",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-792-K1805A&dw=&dt=20260530&departure=1945&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "19:48",
+      "transfer_train": {
+        "departure": "19:52",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-812-R1909B&dw=&dt=20260530&departure=1952&SFF=366-15&d=1",
+        "kayashima_departure": "19:52",
+        "kadoma_arrival": "19:57"
+      }
+    },
+    {
+      "departure": "19:57",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 57",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-794-K1807A&dw=&dt=20260530&departure=1957&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "20:00",
+      "transfer_train": {
+        "departure": "20:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-816-R2001B&dw=&dt=20260530&departure=2004&SFF=366-15&d=1",
+        "kayashima_departure": "20:04",
+        "kadoma_arrival": "20:09"
+      }
+    },
+    {
+      "departure": "20:08",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 08",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-797-K1809A&dw=&dt=20260530&departure=2008&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "20:11",
+      "transfer_train": {
+        "departure": "20:16",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]屋 16",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-821-R2003A&dw=&dt=20260530&departure=2016&SFF=366-15&d=1",
+        "kayashima_departure": "20:16",
+        "kadoma_arrival": "20:21"
+      }
+    },
+    {
+      "departure": "20:20",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 20",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-801-K1901A&dw=&dt=20260530&departure=2020&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "20:24",
+      "transfer_train": {
+        "departure": "20:28",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 28",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-826-R2005B&dw=&dt=20260530&departure=2028&SFF=366-15&d=1",
+        "kayashima_departure": "20:28",
+        "kadoma_arrival": "20:33"
+      }
+    },
+    {
+      "departure": "20:33",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 33",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-814-M2001A&dw=&dt=20260530&departure=2033&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "20:36",
+      "transfer_train": {
+        "departure": "20:37",
+        "type": "区急",
+        "destination": null,
+        "label": "[区急]屋 37",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-818-P2001A&dw=&dt=20260530&departure=2037&SFF=366-15&d=1",
+        "kayashima_departure": "20:37",
+        "kadoma_arrival": "20:42"
+      }
+    },
+    {
+      "departure": "20:46",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 46",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-806-K1903A&dw=&dt=20260530&departure=2046&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "20:50",
+      "transfer_train": {
+        "departure": "20:50",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 50",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-830-R2009B&dw=&dt=20260530&departure=2050&SFF=366-15&d=1",
+        "kayashima_departure": "20:50",
+        "kadoma_arrival": "20:55"
+      }
+    },
+    {
+      "departure": "21:00",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 00",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-820-M2003A&dw=&dt=20260530&departure=2100&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "21:03",
+      "transfer_train": {
+        "departure": "21:05",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 05",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-832-R2101B&dw=&dt=20260530&departure=2105&SFF=366-15&d=1",
+        "kayashima_departure": "21:05",
+        "kadoma_arrival": "21:10"
+      }
+    },
+    {
+      "departure": "21:14",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 14",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-815-K2001A&dw=&dt=20260530&departure=2114&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "21:18",
+      "transfer_train": {
+        "departure": "21:18",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 18",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-838-R2103B&dw=&dt=20260530&departure=2118&SFF=366-15&d=1",
+        "kayashima_departure": "21:18",
+        "kadoma_arrival": "21:24"
+      }
+    },
+    {
+      "departure": "21:29",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 29",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-823-K2003A&dw=&dt=20260530&departure=2129&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "21:33",
+      "transfer_train": {
+        "departure": "21:33",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 33",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-842-R2105B&dw=&dt=20260530&departure=2133&SFF=366-15&d=1",
+        "kayashima_departure": "21:33",
+        "kadoma_arrival": "21:38"
+      }
+    },
+    {
+      "departure": "21:44",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 44",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-824-K2005A&dw=&dt=20260530&departure=2144&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "21:48",
+      "transfer_train": {
+        "departure": "21:52",
+        "type": "区急",
+        "destination": null,
+        "label": "[区急]屋 52",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-836-P2101A&dw=&dt=20260530&departure=2152&SFF=366-15&d=1",
+        "kayashima_departure": "21:52",
+        "kadoma_arrival": "21:57"
+      }
+    },
+    {
+      "departure": "21:59",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 59",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-827-K2007A&dw=&dt=20260530&departure=2159&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "22:03",
+      "transfer_train": {
+        "departure": "22:04",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 04",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-847-R2201B&dw=&dt=20260530&departure=2204&SFF=366-15&d=1",
+        "kayashima_departure": "22:04",
+        "kadoma_arrival": "22:09"
+      }
+    },
+    {
+      "departure": "22:14",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 14",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-837-M2101A&dw=&dt=20260530&departure=2214&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "22:18",
+      "transfer_train": {
+        "departure": "22:18",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 18",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-852-R2203B&dw=&dt=20260530&departure=2218&SFF=366-15&d=1",
+        "kayashima_departure": "22:18",
+        "kadoma_arrival": "22:23"
+      }
+    },
+    {
+      "departure": "22:30",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 30",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-833-K2101A&dw=&dt=20260530&departure=2230&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "22:33",
+      "transfer_train": {
+        "departure": "22:33",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]屋 33",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-856-R2205A&dw=&dt=20260530&departure=2233&SFF=366-15&d=1",
+        "kayashima_departure": "22:33",
+        "kadoma_arrival": "22:38"
+      }
+    },
+    {
+      "departure": "22:46",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 46",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-839-K2103A&dw=&dt=20260530&departure=2246&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "22:49",
+      "transfer_train": {
+        "departure": "22:50",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 50",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-857-R2207B&dw=&dt=20260530&departure=2250&SFF=366-15&d=1",
+        "kayashima_departure": "22:50",
+        "kadoma_arrival": "22:55"
+      }
+    },
+    {
+      "departure": "23:07",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 07",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-845-M2201A&dw=&dt=20260530&departure=2307&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "23:10",
+      "transfer_train": {
+        "departure": "23:10",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]之 10",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-861-R2301B&dw=&dt=20260530&departure=2310&SFF=366-15&d=1",
+        "kayashima_departure": "23:10",
+        "kadoma_arrival": "23:15"
+      }
+    },
+    {
+      "departure": "23:22",
+      "type": "準急",
+      "destination": null,
+      "label": "[準急]屋 22",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-850-K2201A&dw=&dt=20260530&departure=2322&SFF=366-16&d=1",
+      "route": "transfer_at_kayashima",
+      "kayashima_arrival": "23:25",
+      "transfer_train": {
+        "departure": "23:29",
+        "type": "普通",
+        "destination": null,
+        "label": "[普通]屋 29",
+        "url": "https://ekitan.com/timetable/railway/train?sf=5102&tx=1720110-867-R2305A&dw=&dt=20260530&departure=2329&SFF=366-15&d=1",
+        "kayashima_departure": "23:29",
+        "kadoma_arrival": "23:34"
+      }
+    },
+    {
+      "departure": "23:40",
+      "type": "普通",
+      "destination": null,
+      "label": "[普通]之 40",
+      "url": "https://ekitan.com/timetable/railway/train?sf=5789&tx=1720110-848-Q2201B&dw=&dt=20260530&departure=2340&SFF=366-16&d=1",
+      "route": "direct",
+      "kadoma_arrival": "23:49"
+    }
+  ]
+}

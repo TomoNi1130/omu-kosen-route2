@@ -1,0 +1,7 @@
+/.agents
+/.clangd
+/.codex
+/.venv
+/.vscode
+/build
+/compile_commands.json

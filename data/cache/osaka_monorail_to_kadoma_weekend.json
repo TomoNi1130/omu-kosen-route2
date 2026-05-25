@@ -1,0 +1,1613 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-25T05:28:10.215615+00:00",
+  "service_day": "weekend",
+  "service_date": "20260530",
+  "line": "大阪モノレール",
+  "direction": "門真市方面",
+  "stations": [
+    "大阪空港",
+    "蛍池",
+    "柴原阪大前",
+    "少路",
+    "千里中央",
+    "山田",
+    "万博記念公園",
+    "宇野辺",
+    "南茨木",
+    "沢良宜",
+    "摂津",
+    "南摂津",
+    "大日"
+  ],
+  "by_station": {
+    "大日": {
+      "generated_at": "2026-05-25T03:12:50.410740+00:00",
+      "source_url": "https://ekitan.com/timetable/railway/line-station/322-12/d2?dt=20260530",
+      "trains": [
+        {
+          "departure": "05:52",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 52",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-606-503&dw=&dt=20260530&departure=0552&SFF=322-12&d=2",
+          "kadoma_arrival": "05:54"
+        },
+        {
+          "departure": "06:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-607-505&dw=&dt=20260530&departure=0601&SFF=322-12&d=2",
+          "kadoma_arrival": "06:03"
+        },
+        {
+          "departure": "06:13",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 13",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-608-507&dw=&dt=20260530&departure=0613&SFF=322-12&d=2",
+          "kadoma_arrival": "06:15"
+        },
+        {
+          "departure": "06:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-609-509&dw=&dt=20260530&departure=0625&SFF=322-12&d=2",
+          "kadoma_arrival": "06:27"
+        },
+        {
+          "departure": "06:38",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 38",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-610-601&dw=&dt=20260530&departure=0638&SFF=322-12&d=2",
+          "kadoma_arrival": "06:40"
+        },
+        {
+          "departure": "06:50",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 50",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-611-603&dw=&dt=20260530&departure=0650&SFF=322-12&d=2",
+          "kadoma_arrival": "06:52"
+        },
+        {
+          "departure": "07:00",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 00",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-612-605&dw=&dt=20260530&departure=0700&SFF=322-12&d=2",
+          "kadoma_arrival": "07:02"
+        },
+        {
+          "departure": "07:09",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 09",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-613-607HA&dw=&dt=20260530&departure=0709&SFF=322-12&d=2",
+          "kadoma_arrival": "07:11"
+        },
+        {
+          "departure": "07:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-614-609HA&dw=&dt=20260530&departure=0720&SFF=322-12&d=2",
+          "kadoma_arrival": "07:22"
+        },
+        {
+          "departure": "07:30",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 30",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-615-611HB&dw=&dt=20260530&departure=0730&SFF=322-12&d=2",
+          "kadoma_arrival": "07:32"
+        },
+        {
+          "departure": "07:40",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 40",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-616-701HB&dw=&dt=20260530&departure=0740&SFF=322-12&d=2",
+          "kadoma_arrival": "07:42"
+        },
+        {
+          "departure": "07:48",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 48",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-617-703HB&dw=&dt=20260530&departure=0748&SFF=322-12&d=2",
+          "kadoma_arrival": "07:50"
+        },
+        {
+          "departure": "07:58",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 58",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-618-705HB&dw=&dt=20260530&departure=0758&SFF=322-12&d=2",
+          "kadoma_arrival": "08:00"
+        },
+        {
+          "departure": "08:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-619-707HB&dw=&dt=20260530&departure=0808&SFF=322-12&d=2",
+          "kadoma_arrival": "08:10"
+        },
+        {
+          "departure": "08:18",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 18",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-620-709HB&dw=&dt=20260530&departure=0818&SFF=322-12&d=2",
+          "kadoma_arrival": "08:20"
+        },
+        {
+          "departure": "08:28",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 28",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-621-711HB&dw=&dt=20260530&departure=0828&SFF=322-12&d=2",
+          "kadoma_arrival": "08:30"
+        },
+        {
+          "departure": "08:38",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 38",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-622-801HB&dw=&dt=20260530&departure=0838&SFF=322-12&d=2",
+          "kadoma_arrival": "08:40"
+        },
+        {
+          "departure": "08:48",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 48",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-623-803HB&dw=&dt=20260530&departure=0848&SFF=322-12&d=2",
+          "kadoma_arrival": "08:50"
+        },
+        {
+          "departure": "08:58",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 58",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-624-805HB&dw=&dt=20260530&departure=0858&SFF=322-12&d=2",
+          "kadoma_arrival": "09:00"
+        },
+        {
+          "departure": "09:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-625-807HB&dw=&dt=20260530&departure=0908&SFF=322-12&d=2",
+          "kadoma_arrival": "09:10"
+        },
+        {
+          "departure": "09:18",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 18",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-626-809HB&dw=&dt=20260530&departure=0918&SFF=322-12&d=2",
+          "kadoma_arrival": "09:20"
+        },
+        {
+          "departure": "09:28",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 28",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-627-811HB&dw=&dt=20260530&departure=0928&SFF=322-12&d=2",
+          "kadoma_arrival": "09:30"
+        },
+        {
+          "departure": "09:38",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 38",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-628-901HB&dw=&dt=20260530&departure=0938&SFF=322-12&d=2",
+          "kadoma_arrival": "09:40"
+        },
+        {
+          "departure": "09:48",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 48",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-629-903HB&dw=&dt=20260530&departure=0948&SFF=322-12&d=2",
+          "kadoma_arrival": "09:50"
+        },
+        {
+          "departure": "09:58",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 58",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-630-905HB&dw=&dt=20260530&departure=0958&SFF=322-12&d=2",
+          "kadoma_arrival": "10:00"
+        },
+        {
+          "departure": "10:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-631-907HB&dw=&dt=20260530&departure=1008&SFF=322-12&d=2",
+          "kadoma_arrival": "10:10"
+        },
+        {
+          "departure": "10:18",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 18",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-632-909HB&dw=&dt=20260530&departure=1018&SFF=322-12&d=2",
+          "kadoma_arrival": "10:20"
+        },
+        {
+          "departure": "10:28",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 28",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-633-911HB&dw=&dt=20260530&departure=1028&SFF=322-12&d=2",
+          "kadoma_arrival": "10:30"
+        },
+        {
+          "departure": "10:38",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 38",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-634-1001HB&dw=&dt=20260530&departure=1038&SFF=322-12&d=2",
+          "kadoma_arrival": "10:40"
+        },
+        {
+          "departure": "10:48",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 48",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-635-1003HB&dw=&dt=20260530&departure=1048&SFF=322-12&d=2",
+          "kadoma_arrival": "10:50"
+        },
+        {
+          "departure": "10:58",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 58",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-636-1005HB&dw=&dt=20260530&departure=1058&SFF=322-12&d=2",
+          "kadoma_arrival": "11:00"
+        },
+        {
+          "departure": "11:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-637-1007HB&dw=&dt=20260530&departure=1108&SFF=322-12&d=2",
+          "kadoma_arrival": "11:10"
+        },
+        {
+          "departure": "11:18",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 18",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-638-1009HB&dw=&dt=20260530&departure=1118&SFF=322-12&d=2",
+          "kadoma_arrival": "11:20"
+        },
+        {
+          "departure": "11:28",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 28",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-639-1011HB&dw=&dt=20260530&departure=1128&SFF=322-12&d=2",
+          "kadoma_arrival": "11:30"
+        },
+        {
+          "departure": "11:38",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 38",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-640-1101HB&dw=&dt=20260530&departure=1138&SFF=322-12&d=2",
+          "kadoma_arrival": "11:40"
+        },
+        {
+          "departure": "11:48",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 48",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-641-1103HB&dw=&dt=20260530&departure=1148&SFF=322-12&d=2",
+          "kadoma_arrival": "11:50"
+        },
+        {
+          "departure": "11:58",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 58",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-642-1105HB&dw=&dt=20260530&departure=1158&SFF=322-12&d=2",
+          "kadoma_arrival": "12:00"
+        },
+        {
+          "departure": "12:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-643-1107HB&dw=&dt=20260530&departure=1208&SFF=322-12&d=2",
+          "kadoma_arrival": "12:10"
+        },
+        {
+          "departure": "12:18",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 18",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-644-1109HB&dw=&dt=20260530&departure=1218&SFF=322-12&d=2",
+          "kadoma_arrival": "12:20"
+        },
+        {
+          "departure": "12:28",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 28",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-645-1111HB&dw=&dt=20260530&departure=1228&SFF=322-12&d=2",
+          "kadoma_arrival": "12:30"
+        },
+        {
+          "departure": "12:38",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 38",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-646-1201HB&dw=&dt=20260530&departure=1238&SFF=322-12&d=2",
+          "kadoma_arrival": "12:40"
+        },
+        {
+          "departure": "12:48",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 48",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-647-1203HB&dw=&dt=20260530&departure=1248&SFF=322-12&d=2",
+          "kadoma_arrival": "12:50"
+        },
+        {
+          "departure": "12:58",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 58",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-648-1205HB&dw=&dt=20260530&departure=1258&SFF=322-12&d=2",
+          "kadoma_arrival": "13:00"
+        },
+        {
+          "departure": "13:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-649-1207HB&dw=&dt=20260530&departure=1308&SFF=322-12&d=2",
+          "kadoma_arrival": "13:10"
+        },
+        {
+          "departure": "13:19",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 19",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-650-1209HB&dw=&dt=20260530&departure=1319&SFF=322-12&d=2",
+          "kadoma_arrival": "13:21"
+        },
+        {
+          "departure": "13:30",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 30",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-651-1211HB&dw=&dt=20260530&departure=1330&SFF=322-12&d=2",
+          "kadoma_arrival": "13:32"
+        },
+        {
+          "departure": "13:41",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 41",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-652-1301HB&dw=&dt=20260530&departure=1341&SFF=322-12&d=2",
+          "kadoma_arrival": "13:43"
+        },
+        {
+          "departure": "13:52",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 52",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-653-1303HB&dw=&dt=20260530&departure=1352&SFF=322-12&d=2",
+          "kadoma_arrival": "13:54"
+        },
+        {
+          "departure": "14:03",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 03",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-654-1305HB&dw=&dt=20260530&departure=1403&SFF=322-12&d=2",
+          "kadoma_arrival": "14:05"
+        },
+        {
+          "departure": "14:14",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 14",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-655-1307HB&dw=&dt=20260530&departure=1414&SFF=322-12&d=2",
+          "kadoma_arrival": "14:16"
+        },
+        {
+          "departure": "14:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-656-1309HB&dw=&dt=20260530&departure=1425&SFF=322-12&d=2",
+          "kadoma_arrival": "14:27"
+        },
+        {
+          "departure": "14:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-657-1401HB&dw=&dt=20260530&departure=1437&SFF=322-12&d=2",
+          "kadoma_arrival": "14:39"
+        },
+        {
+          "departure": "14:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-658-1403HB&dw=&dt=20260530&departure=1449&SFF=322-12&d=2",
+          "kadoma_arrival": "14:51"
+        },
+        {
+          "departure": "15:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-659-1405HB&dw=&dt=20260530&departure=1501&SFF=322-12&d=2",
+          "kadoma_arrival": "15:03"
+        },
+        {
+          "departure": "15:13",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 13",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-660-1407HB&dw=&dt=20260530&departure=1513&SFF=322-12&d=2",
+          "kadoma_arrival": "15:15"
+        },
+        {
+          "departure": "15:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-661-1409HB&dw=&dt=20260530&departure=1525&SFF=322-12&d=2",
+          "kadoma_arrival": "15:27"
+        },
+        {
+          "departure": "15:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-662-1501HB&dw=&dt=20260530&departure=1537&SFF=322-12&d=2",
+          "kadoma_arrival": "15:39"
+        },
+        {
+          "departure": "15:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-663-1503HB&dw=&dt=20260530&departure=1549&SFF=322-12&d=2",
+          "kadoma_arrival": "15:51"
+        },
+        {
+          "departure": "16:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-664-1505HB&dw=&dt=20260530&departure=1601&SFF=322-12&d=2",
+          "kadoma_arrival": "16:03"
+        },
+        {
+          "departure": "16:13",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 13",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-665-1507HB&dw=&dt=20260530&departure=1613&SFF=322-12&d=2",
+          "kadoma_arrival": "16:15"
+        },
+        {
+          "departure": "16:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-666-1509HB&dw=&dt=20260530&departure=1625&SFF=322-12&d=2",
+          "kadoma_arrival": "16:27"
+        },
+        {
+          "departure": "16:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-667-1601HB&dw=&dt=20260530&departure=1637&SFF=322-12&d=2",
+          "kadoma_arrival": "16:39"
+        },
+        {
+          "departure": "16:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-669-1605HB&dw=&dt=20260530&departure=1649&SFF=322-12&d=2",
+          "kadoma_arrival": "16:51"
+        },
+        {
+          "departure": "17:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-671-1609HB&dw=&dt=20260530&departure=1701&SFF=322-12&d=2",
+          "kadoma_arrival": "17:03"
+        },
+        {
+          "departure": "17:13",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 13",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-673-1613HB&dw=&dt=20260530&departure=1713&SFF=322-12&d=2",
+          "kadoma_arrival": "17:15"
+        },
+        {
+          "departure": "17:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-675-1617HB&dw=&dt=20260530&departure=1725&SFF=322-12&d=2",
+          "kadoma_arrival": "17:27"
+        },
+        {
+          "departure": "17:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-677-1701HB&dw=&dt=20260530&departure=1737&SFF=322-12&d=2",
+          "kadoma_arrival": "17:39"
+        },
+        {
+          "departure": "17:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-679-1705HB&dw=&dt=20260530&departure=1749&SFF=322-12&d=2",
+          "kadoma_arrival": "17:51"
+        },
+        {
+          "departure": "18:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-681-1709HB&dw=&dt=20260530&departure=1801&SFF=322-12&d=2",
+          "kadoma_arrival": "18:03"
+        },
+        {
+          "departure": "18:13",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 13",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-683-1713HB&dw=&dt=20260530&departure=1813&SFF=322-12&d=2",
+          "kadoma_arrival": "18:15"
+        },
+        {
+          "departure": "18:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-685-1717HB&dw=&dt=20260530&departure=1825&SFF=322-12&d=2",
+          "kadoma_arrival": "18:27"
+        },
+        {
+          "departure": "18:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-687-1801HB&dw=&dt=20260530&departure=1837&SFF=322-12&d=2",
+          "kadoma_arrival": "18:39"
+        },
+        {
+          "departure": "18:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-689-1805HB&dw=&dt=20260530&departure=1849&SFF=322-12&d=2",
+          "kadoma_arrival": "18:51"
+        },
+        {
+          "departure": "19:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-690-1809HB&dw=&dt=20260530&departure=1901&SFF=322-12&d=2",
+          "kadoma_arrival": "19:03"
+        },
+        {
+          "departure": "19:13",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 13",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-691-1811HB&dw=&dt=20260530&departure=1913&SFF=322-12&d=2",
+          "kadoma_arrival": "19:15"
+        },
+        {
+          "departure": "19:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-692-1813&dw=&dt=20260530&departure=1925&SFF=322-12&d=2",
+          "kadoma_arrival": "19:27"
+        },
+        {
+          "departure": "19:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-693-1901&dw=&dt=20260530&departure=1937&SFF=322-12&d=2",
+          "kadoma_arrival": "19:39"
+        },
+        {
+          "departure": "19:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-694-1903&dw=&dt=20260530&departure=1949&SFF=322-12&d=2",
+          "kadoma_arrival": "19:51"
+        },
+        {
+          "departure": "20:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-695-1905&dw=&dt=20260530&departure=2001&SFF=322-12&d=2",
+          "kadoma_arrival": "20:03"
+        },
+        {
+          "departure": "20:13",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 13",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-696-1907&dw=&dt=20260530&departure=2013&SFF=322-12&d=2",
+          "kadoma_arrival": "20:15"
+        },
+        {
+          "departure": "20:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-697-1909&dw=&dt=20260530&departure=2025&SFF=322-12&d=2",
+          "kadoma_arrival": "20:27"
+        },
+        {
+          "departure": "20:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-698-2001&dw=&dt=20260530&departure=2037&SFF=322-12&d=2",
+          "kadoma_arrival": "20:39"
+        },
+        {
+          "departure": "20:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-699-2003&dw=&dt=20260530&departure=2049&SFF=322-12&d=2",
+          "kadoma_arrival": "20:51"
+        },
+        {
+          "departure": "21:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-700-2005&dw=&dt=20260530&departure=2101&SFF=322-12&d=2",
+          "kadoma_arrival": "21:03"
+        },
+        {
+          "departure": "21:13",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 13",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-701-2007&dw=&dt=20260530&departure=2113&SFF=322-12&d=2",
+          "kadoma_arrival": "21:15"
+        },
+        {
+          "departure": "21:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-702-2009&dw=&dt=20260530&departure=2125&SFF=322-12&d=2",
+          "kadoma_arrival": "21:27"
+        },
+        {
+          "departure": "21:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-703-2101&dw=&dt=20260530&departure=2137&SFF=322-12&d=2",
+          "kadoma_arrival": "21:39"
+        },
+        {
+          "departure": "21:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-704-2103&dw=&dt=20260530&departure=2149&SFF=322-12&d=2",
+          "kadoma_arrival": "21:51"
+        },
+        {
+          "departure": "22:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-705-2105&dw=&dt=20260530&departure=2201&SFF=322-12&d=2",
+          "kadoma_arrival": "22:03"
+        },
+        {
+          "departure": "22:13",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 13",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-706-2107&dw=&dt=20260530&departure=2213&SFF=322-12&d=2",
+          "kadoma_arrival": "22:15"
+        },
+        {
+          "departure": "22:25",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 25",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-707-2109&dw=&dt=20260530&departure=2225&SFF=322-12&d=2",
+          "kadoma_arrival": "22:27"
+        },
+        {
+          "departure": "22:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-708-2201&dw=&dt=20260530&departure=2237&SFF=322-12&d=2",
+          "kadoma_arrival": "22:39"
+        },
+        {
+          "departure": "22:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-709-2203&dw=&dt=20260530&departure=2249&SFF=322-12&d=2",
+          "kadoma_arrival": "22:51"
+        },
+        {
+          "departure": "23:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-710-2205&dw=&dt=20260530&departure=2301&SFF=322-12&d=2",
+          "kadoma_arrival": "23:03"
+        },
+        {
+          "departure": "23:12",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 12",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-711-2207&dw=&dt=20260530&departure=2312&SFF=322-12&d=2",
+          "kadoma_arrival": "23:14"
+        },
+        {
+          "departure": "23:23",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 23",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-712-2209&dw=&dt=20260530&departure=2323&SFF=322-12&d=2",
+          "kadoma_arrival": "23:25"
+        },
+        {
+          "departure": "23:38",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 38",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-713-2301&dw=&dt=20260530&departure=2338&SFF=322-12&d=2",
+          "kadoma_arrival": "23:40"
+        },
+        {
+          "departure": "23:50",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 50",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-714-2303&dw=&dt=20260530&departure=2350&SFF=322-12&d=2",
+          "kadoma_arrival": "23:52"
+        },
+        {
+          "departure": "00:05",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 05",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5592&tx=2200100-715-2305&dw=&dt=20260530&departure=0005&SFF=322-12&d=2",
+          "kadoma_arrival": "00:07"
+        }
+      ]
+    },
+    "柴原阪大前": {
+      "generated_at": "2026-05-25T05:28:10.215626+00:00",
+      "source_url": "https://ekitan.com/timetable/railway/line-station/322-2/d2?dt=20260530",
+      "trains": [
+        {
+          "departure": "05:45",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 45",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-608-507&dw=&dt=20260530&departure=0545&SFF=322-2&d=2",
+          "kadoma_arrival": "06:15"
+        },
+        {
+          "departure": "05:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-609-509&dw=&dt=20260530&departure=0556&SFF=322-2&d=2",
+          "kadoma_arrival": "06:26"
+        },
+        {
+          "departure": "06:09",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 09",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-610-601&dw=&dt=20260530&departure=0609&SFF=322-2&d=2",
+          "kadoma_arrival": "06:39"
+        },
+        {
+          "departure": "06:21",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 21",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-611-603&dw=&dt=20260530&departure=0621&SFF=322-2&d=2",
+          "kadoma_arrival": "06:51"
+        },
+        {
+          "departure": "06:31",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 31",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-612-605&dw=&dt=20260530&departure=0631&SFF=322-2&d=2",
+          "kadoma_arrival": "07:01"
+        },
+        {
+          "departure": "06:40",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 40",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-613-607HA&dw=&dt=20260530&departure=0640&SFF=322-2&d=2",
+          "kadoma_arrival": "07:10"
+        },
+        {
+          "departure": "06:51",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 51",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-614-609HA&dw=&dt=20260530&departure=0651&SFF=322-2&d=2",
+          "kadoma_arrival": "07:21"
+        },
+        {
+          "departure": "07:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-615-611HB&dw=&dt=20260530&departure=0701&SFF=322-2&d=2",
+          "kadoma_arrival": "07:31"
+        },
+        {
+          "departure": "07:11",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 11",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-616-701HB&dw=&dt=20260530&departure=0711&SFF=322-2&d=2",
+          "kadoma_arrival": "07:41"
+        },
+        {
+          "departure": "07:19",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 19",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-617-703HB&dw=&dt=20260530&departure=0719&SFF=322-2&d=2",
+          "kadoma_arrival": "07:49"
+        },
+        {
+          "departure": "07:29",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 29",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-618-705HB&dw=&dt=20260530&departure=0729&SFF=322-2&d=2",
+          "kadoma_arrival": "07:59"
+        },
+        {
+          "departure": "07:39",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 39",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-619-707HB&dw=&dt=20260530&departure=0739&SFF=322-2&d=2",
+          "kadoma_arrival": "08:09"
+        },
+        {
+          "departure": "07:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-620-709HB&dw=&dt=20260530&departure=0749&SFF=322-2&d=2",
+          "kadoma_arrival": "08:19"
+        },
+        {
+          "departure": "07:59",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 59",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-621-711HB&dw=&dt=20260530&departure=0759&SFF=322-2&d=2",
+          "kadoma_arrival": "08:29"
+        },
+        {
+          "departure": "08:09",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 09",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-622-801HB&dw=&dt=20260530&departure=0809&SFF=322-2&d=2",
+          "kadoma_arrival": "08:39"
+        },
+        {
+          "departure": "08:19",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 19",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-623-803HB&dw=&dt=20260530&departure=0819&SFF=322-2&d=2",
+          "kadoma_arrival": "08:49"
+        },
+        {
+          "departure": "08:29",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 29",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-624-805HB&dw=&dt=20260530&departure=0829&SFF=322-2&d=2",
+          "kadoma_arrival": "08:59"
+        },
+        {
+          "departure": "08:39",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 39",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-625-807HB&dw=&dt=20260530&departure=0839&SFF=322-2&d=2",
+          "kadoma_arrival": "09:09"
+        },
+        {
+          "departure": "08:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-626-809HB&dw=&dt=20260530&departure=0849&SFF=322-2&d=2",
+          "kadoma_arrival": "09:19"
+        },
+        {
+          "departure": "08:59",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 59",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-627-811HB&dw=&dt=20260530&departure=0859&SFF=322-2&d=2",
+          "kadoma_arrival": "09:29"
+        },
+        {
+          "departure": "09:09",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 09",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-628-901HB&dw=&dt=20260530&departure=0909&SFF=322-2&d=2",
+          "kadoma_arrival": "09:39"
+        },
+        {
+          "departure": "09:19",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 19",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-629-903HB&dw=&dt=20260530&departure=0919&SFF=322-2&d=2",
+          "kadoma_arrival": "09:49"
+        },
+        {
+          "departure": "09:29",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 29",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-630-905HB&dw=&dt=20260530&departure=0929&SFF=322-2&d=2",
+          "kadoma_arrival": "09:59"
+        },
+        {
+          "departure": "09:39",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 39",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-631-907HB&dw=&dt=20260530&departure=0939&SFF=322-2&d=2",
+          "kadoma_arrival": "10:09"
+        },
+        {
+          "departure": "09:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-632-909HB&dw=&dt=20260530&departure=0949&SFF=322-2&d=2",
+          "kadoma_arrival": "10:19"
+        },
+        {
+          "departure": "09:59",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 59",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-633-911HB&dw=&dt=20260530&departure=0959&SFF=322-2&d=2",
+          "kadoma_arrival": "10:29"
+        },
+        {
+          "departure": "10:09",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 09",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-634-1001HB&dw=&dt=20260530&departure=1009&SFF=322-2&d=2",
+          "kadoma_arrival": "10:39"
+        },
+        {
+          "departure": "10:19",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 19",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-635-1003HB&dw=&dt=20260530&departure=1019&SFF=322-2&d=2",
+          "kadoma_arrival": "10:49"
+        },
+        {
+          "departure": "10:29",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 29",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-636-1005HB&dw=&dt=20260530&departure=1029&SFF=322-2&d=2",
+          "kadoma_arrival": "10:59"
+        },
+        {
+          "departure": "10:39",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 39",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-637-1007HB&dw=&dt=20260530&departure=1039&SFF=322-2&d=2",
+          "kadoma_arrival": "11:09"
+        },
+        {
+          "departure": "10:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-638-1009HB&dw=&dt=20260530&departure=1049&SFF=322-2&d=2",
+          "kadoma_arrival": "11:19"
+        },
+        {
+          "departure": "10:59",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 59",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-639-1011HB&dw=&dt=20260530&departure=1059&SFF=322-2&d=2",
+          "kadoma_arrival": "11:29"
+        },
+        {
+          "departure": "11:09",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 09",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-640-1101HB&dw=&dt=20260530&departure=1109&SFF=322-2&d=2",
+          "kadoma_arrival": "11:39"
+        },
+        {
+          "departure": "11:19",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 19",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-641-1103HB&dw=&dt=20260530&departure=1119&SFF=322-2&d=2",
+          "kadoma_arrival": "11:49"
+        },
+        {
+          "departure": "11:29",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 29",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-642-1105HB&dw=&dt=20260530&departure=1129&SFF=322-2&d=2",
+          "kadoma_arrival": "11:59"
+        },
+        {
+          "departure": "11:39",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 39",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-643-1107HB&dw=&dt=20260530&departure=1139&SFF=322-2&d=2",
+          "kadoma_arrival": "12:09"
+        },
+        {
+          "departure": "11:49",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 49",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-644-1109HB&dw=&dt=20260530&departure=1149&SFF=322-2&d=2",
+          "kadoma_arrival": "12:19"
+        },
+        {
+          "departure": "11:59",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 59",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-645-1111HB&dw=&dt=20260530&departure=1159&SFF=322-2&d=2",
+          "kadoma_arrival": "12:29"
+        },
+        {
+          "departure": "12:09",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 09",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-646-1201HB&dw=&dt=20260530&departure=1209&SFF=322-2&d=2",
+          "kadoma_arrival": "12:39"
+        },
+        {
+          "departure": "12:19",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 19",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-647-1203HB&dw=&dt=20260530&departure=1219&SFF=322-2&d=2",
+          "kadoma_arrival": "12:49"
+        },
+        {
+          "departure": "12:29",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 29",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-648-1205HB&dw=&dt=20260530&departure=1229&SFF=322-2&d=2",
+          "kadoma_arrival": "12:59"
+        },
+        {
+          "departure": "12:39",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 39",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-649-1207HB&dw=&dt=20260530&departure=1239&SFF=322-2&d=2",
+          "kadoma_arrival": "13:09"
+        },
+        {
+          "departure": "12:50",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 50",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-650-1209HB&dw=&dt=20260530&departure=1250&SFF=322-2&d=2",
+          "kadoma_arrival": "13:20"
+        },
+        {
+          "departure": "13:01",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 01",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-651-1211HB&dw=&dt=20260530&departure=1301&SFF=322-2&d=2",
+          "kadoma_arrival": "13:31"
+        },
+        {
+          "departure": "13:12",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 12",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-652-1301HB&dw=&dt=20260530&departure=1312&SFF=322-2&d=2",
+          "kadoma_arrival": "13:42"
+        },
+        {
+          "departure": "13:23",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 23",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-653-1303HB&dw=&dt=20260530&departure=1323&SFF=322-2&d=2",
+          "kadoma_arrival": "13:53"
+        },
+        {
+          "departure": "13:34",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 34",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-654-1305HB&dw=&dt=20260530&departure=1334&SFF=322-2&d=2",
+          "kadoma_arrival": "14:04"
+        },
+        {
+          "departure": "13:45",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 45",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-655-1307HB&dw=&dt=20260530&departure=1345&SFF=322-2&d=2",
+          "kadoma_arrival": "14:15"
+        },
+        {
+          "departure": "13:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-656-1309HB&dw=&dt=20260530&departure=1356&SFF=322-2&d=2",
+          "kadoma_arrival": "14:26"
+        },
+        {
+          "departure": "14:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-657-1401HB&dw=&dt=20260530&departure=1408&SFF=322-2&d=2",
+          "kadoma_arrival": "14:38"
+        },
+        {
+          "departure": "14:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-658-1403HB&dw=&dt=20260530&departure=1420&SFF=322-2&d=2",
+          "kadoma_arrival": "14:50"
+        },
+        {
+          "departure": "14:32",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 32",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-659-1405HB&dw=&dt=20260530&departure=1432&SFF=322-2&d=2",
+          "kadoma_arrival": "15:02"
+        },
+        {
+          "departure": "14:44",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 44",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-660-1407HB&dw=&dt=20260530&departure=1444&SFF=322-2&d=2",
+          "kadoma_arrival": "15:14"
+        },
+        {
+          "departure": "14:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-661-1409HB&dw=&dt=20260530&departure=1456&SFF=322-2&d=2",
+          "kadoma_arrival": "15:26"
+        },
+        {
+          "departure": "15:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-662-1501HB&dw=&dt=20260530&departure=1508&SFF=322-2&d=2",
+          "kadoma_arrival": "15:38"
+        },
+        {
+          "departure": "15:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-663-1503HB&dw=&dt=20260530&departure=1520&SFF=322-2&d=2",
+          "kadoma_arrival": "15:50"
+        },
+        {
+          "departure": "15:32",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 32",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-664-1505HB&dw=&dt=20260530&departure=1532&SFF=322-2&d=2",
+          "kadoma_arrival": "16:02"
+        },
+        {
+          "departure": "15:44",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 44",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-665-1507HB&dw=&dt=20260530&departure=1544&SFF=322-2&d=2",
+          "kadoma_arrival": "16:14"
+        },
+        {
+          "departure": "15:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-666-1509HB&dw=&dt=20260530&departure=1556&SFF=322-2&d=2",
+          "kadoma_arrival": "16:26"
+        },
+        {
+          "departure": "16:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-667-1601HB&dw=&dt=20260530&departure=1608&SFF=322-2&d=2",
+          "kadoma_arrival": "16:38"
+        },
+        {
+          "departure": "16:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-669-1605HB&dw=&dt=20260530&departure=1620&SFF=322-2&d=2",
+          "kadoma_arrival": "16:50"
+        },
+        {
+          "departure": "16:32",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 32",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-671-1609HB&dw=&dt=20260530&departure=1632&SFF=322-2&d=2",
+          "kadoma_arrival": "17:02"
+        },
+        {
+          "departure": "16:44",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 44",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-673-1613HB&dw=&dt=20260530&departure=1644&SFF=322-2&d=2",
+          "kadoma_arrival": "17:14"
+        },
+        {
+          "departure": "16:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-675-1617HB&dw=&dt=20260530&departure=1656&SFF=322-2&d=2",
+          "kadoma_arrival": "17:26"
+        },
+        {
+          "departure": "17:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-677-1701HB&dw=&dt=20260530&departure=1708&SFF=322-2&d=2",
+          "kadoma_arrival": "17:38"
+        },
+        {
+          "departure": "17:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-679-1705HB&dw=&dt=20260530&departure=1720&SFF=322-2&d=2",
+          "kadoma_arrival": "17:50"
+        },
+        {
+          "departure": "17:32",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 32",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-681-1709HB&dw=&dt=20260530&departure=1732&SFF=322-2&d=2",
+          "kadoma_arrival": "18:02"
+        },
+        {
+          "departure": "17:44",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 44",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-683-1713HB&dw=&dt=20260530&departure=1744&SFF=322-2&d=2",
+          "kadoma_arrival": "18:14"
+        },
+        {
+          "departure": "17:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-685-1717HB&dw=&dt=20260530&departure=1756&SFF=322-2&d=2",
+          "kadoma_arrival": "18:26"
+        },
+        {
+          "departure": "18:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-687-1801HB&dw=&dt=20260530&departure=1808&SFF=322-2&d=2",
+          "kadoma_arrival": "18:38"
+        },
+        {
+          "departure": "18:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-689-1805HB&dw=&dt=20260530&departure=1820&SFF=322-2&d=2",
+          "kadoma_arrival": "18:50"
+        },
+        {
+          "departure": "18:32",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 32",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-690-1809HB&dw=&dt=20260530&departure=1832&SFF=322-2&d=2",
+          "kadoma_arrival": "19:02"
+        },
+        {
+          "departure": "18:44",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 44",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-691-1811HB&dw=&dt=20260530&departure=1844&SFF=322-2&d=2",
+          "kadoma_arrival": "19:14"
+        },
+        {
+          "departure": "18:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-692-1813&dw=&dt=20260530&departure=1856&SFF=322-2&d=2",
+          "kadoma_arrival": "19:26"
+        },
+        {
+          "departure": "19:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-693-1901&dw=&dt=20260530&departure=1908&SFF=322-2&d=2",
+          "kadoma_arrival": "19:38"
+        },
+        {
+          "departure": "19:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-694-1903&dw=&dt=20260530&departure=1920&SFF=322-2&d=2",
+          "kadoma_arrival": "19:50"
+        },
+        {
+          "departure": "19:32",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 32",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-695-1905&dw=&dt=20260530&departure=1932&SFF=322-2&d=2",
+          "kadoma_arrival": "20:02"
+        },
+        {
+          "departure": "19:44",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 44",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-696-1907&dw=&dt=20260530&departure=1944&SFF=322-2&d=2",
+          "kadoma_arrival": "20:14"
+        },
+        {
+          "departure": "19:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-697-1909&dw=&dt=20260530&departure=1956&SFF=322-2&d=2",
+          "kadoma_arrival": "20:26"
+        },
+        {
+          "departure": "20:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-698-2001&dw=&dt=20260530&departure=2008&SFF=322-2&d=2",
+          "kadoma_arrival": "20:38"
+        },
+        {
+          "departure": "20:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-699-2003&dw=&dt=20260530&departure=2020&SFF=322-2&d=2",
+          "kadoma_arrival": "20:50"
+        },
+        {
+          "departure": "20:32",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 32",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-700-2005&dw=&dt=20260530&departure=2032&SFF=322-2&d=2",
+          "kadoma_arrival": "21:02"
+        },
+        {
+          "departure": "20:44",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 44",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-701-2007&dw=&dt=20260530&departure=2044&SFF=322-2&d=2",
+          "kadoma_arrival": "21:14"
+        },
+        {
+          "departure": "20:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-702-2009&dw=&dt=20260530&departure=2056&SFF=322-2&d=2",
+          "kadoma_arrival": "21:26"
+        },
+        {
+          "departure": "21:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-703-2101&dw=&dt=20260530&departure=2108&SFF=322-2&d=2",
+          "kadoma_arrival": "21:38"
+        },
+        {
+          "departure": "21:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-704-2103&dw=&dt=20260530&departure=2120&SFF=322-2&d=2",
+          "kadoma_arrival": "21:50"
+        },
+        {
+          "departure": "21:32",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 32",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-705-2105&dw=&dt=20260530&departure=2132&SFF=322-2&d=2",
+          "kadoma_arrival": "22:02"
+        },
+        {
+          "departure": "21:44",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 44",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-706-2107&dw=&dt=20260530&departure=2144&SFF=322-2&d=2",
+          "kadoma_arrival": "22:14"
+        },
+        {
+          "departure": "21:56",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 56",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-707-2109&dw=&dt=20260530&departure=2156&SFF=322-2&d=2",
+          "kadoma_arrival": "22:26"
+        },
+        {
+          "departure": "22:08",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 08",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-708-2201&dw=&dt=20260530&departure=2208&SFF=322-2&d=2",
+          "kadoma_arrival": "22:38"
+        },
+        {
+          "departure": "22:20",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 20",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-709-2203&dw=&dt=20260530&departure=2220&SFF=322-2&d=2",
+          "kadoma_arrival": "22:50"
+        },
+        {
+          "departure": "22:32",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 32",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-710-2205&dw=&dt=20260530&departure=2232&SFF=322-2&d=2",
+          "kadoma_arrival": "23:02"
+        },
+        {
+          "departure": "22:43",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 43",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-711-2207&dw=&dt=20260530&departure=2243&SFF=322-2&d=2",
+          "kadoma_arrival": "23:13"
+        },
+        {
+          "departure": "22:55",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 55",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-712-2209&dw=&dt=20260530&departure=2255&SFF=322-2&d=2",
+          "kadoma_arrival": "23:25"
+        },
+        {
+          "departure": "23:10",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 10",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-713-2301&dw=&dt=20260530&departure=2310&SFF=322-2&d=2",
+          "kadoma_arrival": "23:40"
+        },
+        {
+          "departure": "23:21",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 21",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-714-2303&dw=&dt=20260530&departure=2321&SFF=322-2&d=2",
+          "kadoma_arrival": "23:51"
+        },
+        {
+          "departure": "23:37",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]門 37",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-715-2305&dw=&dt=20260530&departure=2337&SFF=322-2&d=2",
+          "kadoma_arrival": "24:07"
+        },
+        {
+          "departure": "23:47",
+          "type": "普通",
+          "destination": null,
+          "label": "[普通]茨 47",
+          "url": "https://ekitan.com/timetable/railway/train?sf=5391&tx=2200100-716-2307&dw=&dt=20260530&departure=2347&SFF=322-2&d=2",
+          "kadoma_arrival": "24:17"
+        }
+      ]
+    }
+  }
+}

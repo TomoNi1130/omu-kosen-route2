@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>経路検索</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <main class="page">
+        <section class="search-band">
+            <div class="inner">
+                <h1>大坂モノレール沿線経路探索ツール</h1>
+
+                <form method="post" class="search-form">
+                    <fieldset>
+                        <legend>方向</legend>
+                        <div class="direction-toggle">
+                            <label class="direction-option">
+                                <input type="radio" name="direction" value="to_home" {% if form.direction=="to_home"
+                                    %}checked{% endif %}>
+                                <span>学校 → 自宅</span>
+                            </label>
+                            <label class="direction-option">
+                                <input type="radio" name="direction" value="from_home" {% if form.direction=="from_home"
+                                    %}checked{% endif %}>
+                                <span>自宅 → 学校</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <label>
+                        モノレール駅
+                        <select name="station">
+                            {% for station in stations %}
+                            <option value="{{ station }}" {% if form.station==station %}selected{% endif %}>{{ station
+                                }}</option>
+                            {% endfor %}
+                        </select>
+                    </label>
+
+                    <label>
+                        ダイヤ
+                        <select name="service_day">
+                            {% for value, label in service_days %}
+                            <option value="{{ value }}" {% if form.service_day==value %}selected{% endif %}>{{ label }}
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </label>
+
+                    <label>
+                        出発時刻
+                        <input type="time" name="now_hhmm" value="{{ form.now_hhmm }}" required>
+                    </label>
+
+                    <label>
+                        乗換時間 分
+                        <input type="number" name="transfer_min" min="0" value="{{ form.transfer_min }}">
+                    </label>
+
+                    <label>
+                        自宅側 徒歩 分
+                        <input type="number" name="home_walk_min" min="0" value="{{ form.home_walk_min }}">
+                    </label>
+
+                    <label>
+                        学校側 徒歩 分
+                        <input type="number" name="school_walk_min" min="0" value="{{ form.school_walk_min }}">
+                    </label>
+
+                    <button type="submit">検索</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="result-band">
+            <div class="inner">
+
+                {% if error %}
+                <div class="notice error">{{ error }}</div>
+                {% endif %}
+
+                {% if result.shortest and result.shortest.ok %}
+                {% set shortest_routes = result.shortest.routes if result.shortest.routes else [result.shortest] %}
+                <h1>最短到達ルート（{{ shortest_routes|length }}件）</h1>
+                {% for route in shortest_routes %}
+                <details class="route-details">
+                    <summary>
+                        <span class="route-title">候補 {{ loop.index }}</span>
+                        <span class="route-times">
+                            <span>
+                                <small>出発</small>
+                                <strong>{{ route.start_time }}</strong>
+                            </span>
+                            <span>
+                                <small>到着</small>
+                                <strong>{{ route.end_time }}</strong>
+                            </span>
+                            <span>
+                                <small>所要</small>
+                                <strong>{{ route.total_minutes }}分</strong>
+                            </span>
+                        </span>
+                    </summary>
+
+                    <ol class="timeline">
+                        {% for segment in route.segments %}
+                        <li>
+                            <div class="time">
+                                <strong>{{ segment.departure }}</strong>
+                                <span>{{ segment.arrival }}</span>
+                            </div>
+                            <div class="segment-body">
+                                <div class="line-row">
+                                    <span class="line">{{ segment.line }}</span>
+                                    {% if segment.type %}
+                                    <span class="type">{{ segment.type }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="places">{{ segment.from }} → {{ segment.to }}</div>
+                                {% if segment.note %}
+                                <div class="note">{{ segment.note }}</div>
+                                {% endif %}
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ol>
+                </details>
+                {% endfor %}
+                {% endif %}
+
+                {% if result %}
+                {% if result.fastest and result.fastest.ok %}
+                <h1>最速到着ルート</h1>
+                <div class="summary">
+                    <div>
+                        <span>出発</span>
+                        <strong>{{ result.fastest.start_time }}</strong>
+                    </div>
+                    <div>
+                        <span>到着</span>
+                        <strong>{{ result.fastest.end_time }}</strong>
+                    </div>
+                    <div>
+                        <span>所要時間</span>
+                        <strong>{{ result.fastest.total_minutes }}分</strong>
+                    </div>
+                </div>
+
+                <ol class="timeline">
+                    {% for segment in result.fastest.segments %}
+                    <li>
+                        <div class="time">
+                            <strong>{{ segment.departure }}</strong>
+                            <span>{{ segment.arrival }}</span>
+                        </div>
+                        <div class="segment-body">
+                            <div class="line-row">
+                                <span class="line">{{ segment.line }}</span>
+                                {% if segment.type %}
+                                <span class="type">{{ segment.type }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="places">{{ segment.from }} → {{ segment.to }}</div>
+                            {% if segment.note %}
+                            <div class="note">{{ segment.note }}</div>
+                            {% endif %}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ol>
+                {% endif %}
+
+                <details class="debug">
+                    <summary>C++側へ渡したリクエスト</summary>
+                    <pre>{{ request_payload | tojson(indent=2) }}</pre>
+                </details>
+
+                <details class="debug">
+                    <summary>検索結果のJSON</summary>
+                    <pre>{{ result | tojson(indent=2) }}</pre>
+                </details>
+                {% elif not error %}
+                <div class="notice">条件を入力して検索してください。</div>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
