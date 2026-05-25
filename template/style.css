@@ -222,9 +222,11 @@ button:hover {
   content: "開く";
   grid-column: 3;
   justify-self: end;
+  width: 3.5em;
   color: #0f766e;
   font-size: 12px;
   font-weight: 700;
+  text-align: right;
 }
 
 .route-details[open] summary::before {
