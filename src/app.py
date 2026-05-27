@@ -61,6 +61,38 @@ def parse_hhmm(text):
         raise ValueError("出発時刻は HH:MM 形式で入力してください")
 
 
+def minutes_until_hhmm(time_text, base_minutes):
+    minutes = route.hhmm_to_minutes(time_text)
+    while minutes < base_minutes:
+        minutes += 24 * 60
+    return minutes - base_minutes
+
+
+def attach_next_train_wait(route_result, now_minutes):
+    if not route_result or not route_result.get("ok"):
+        return route_result
+
+    for segment in route_result.get("segments", []):
+        if segment.get("mode") != "train":
+            continue
+
+        departure = segment.get("departure")
+        if not departure:
+            break
+
+        route_result["next_train"] = {
+            "line": segment.get("line", ""),
+            "type": segment.get("type", ""),
+            "from": segment.get("from", ""),
+            "to": segment.get("to", ""),
+            "departure": departure,
+            "wait_minutes": minutes_until_hhmm(departure, now_minutes),
+        }
+        break
+
+    return route_result
+
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     stations = [station for station in route.MONO_STATIONS if station != "門真市"]
@@ -113,6 +145,12 @@ def index():
 
             res_fastest = route.find_route(search_request_fastest)
             res_shortest = route.find_route(search_request_shortest)
+
+            attach_next_train_wait(res_fastest, now_minutes)
+            attach_next_train_wait(res_shortest, now_minutes)
+            if res_shortest.get("routes"):
+                for route_result in res_shortest["routes"]:
+                    attach_next_train_wait(route_result, now_minutes)
 
             # エラーハンドリング: 両方失敗したらエラー表示
             if not res_fastest.get("ok", False) and not res_shortest.get("ok", False):

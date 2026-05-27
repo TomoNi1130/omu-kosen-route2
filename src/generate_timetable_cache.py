@@ -125,6 +125,12 @@ def url_for(line, station_idx, direction, service_date=None):
     return url
 
 
+def _monorail_source_for_kadoma(station):
+    station_idx = MONO_STATIONS.index(station)
+    direction = "d1" if station == "大阪空港" else "d2"
+    return station_idx, direction
+
+
 def _next_date_for_weekday(target_weekday):
     today = date.today()
     days = (target_weekday - today.weekday()) % 7
@@ -386,8 +392,8 @@ def build_monorail_to_kadoma_station(station, service_day, service_date):
     if station == "門真市":
         raise ValueError("門真市駅は到着駅なので指定できません")
 
-    station_idx = MONO_STATIONS.index(station)
-    source_url = url_for(MONO_LINE, station_idx, "d2", service_date)
+    station_idx, direction = _monorail_source_for_kadoma(station)
+    source_url = url_for(MONO_LINE, station_idx, direction, service_date)
     trains = fetch_departures(source_url)
     rows = []
     pattern_offsets = {}

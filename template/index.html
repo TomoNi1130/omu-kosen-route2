@@ -83,6 +83,68 @@
                 <div class="notice error">{{ error }}</div>
                 {% endif %}
 
+                {% if result %}
+
+                {% if result.fastest and result.fastest.ok and result.fastest.next_train %}
+                <h1 class="next-train-heading">次の電車に乗れるまで</h1>
+                <div class="next-train">
+                    <div>
+                        <span>あと</span>
+                        <strong>{{ result.fastest.next_train.wait_minutes }}分</strong>
+                    </div>
+                    <div>
+                        <span>発車</span>
+                        <strong>{{ result.fastest.next_train.departure }}</strong>
+                    </div>
+                    <div>
+                        <span>乗車</span>
+                        <strong>{{ result.fastest.next_train.type }}</strong>
+                        <small>{{ result.fastest.next_train.from }} → {{ result.fastest.next_train.to }}</small>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if result.fastest and result.fastest.ok %}
+                <h1>最速到着ルート</h1>
+                <div class="summary">
+                    <div>
+                        <span>出発</span>
+                        <strong>{{ result.fastest.start_time }}</strong>
+                    </div>
+                    <div>
+                        <span>到着</span>
+                        <strong>{{ result.fastest.end_time }}</strong>
+                    </div>
+                    <div>
+                        <span>所要時間</span>
+                        <strong>{{ result.fastest.total_minutes }}分</strong>
+                    </div>
+                </div>
+
+                <ol class="timeline">
+                    {% for segment in result.fastest.segments %}
+                    <li>
+                        <div class="time">
+                            <strong>{{ segment.departure }}</strong>
+                            <span>{{ segment.arrival }}</span>
+                        </div>
+                        <div class="segment-body">
+                            <div class="line-row">
+                                <span class="line">{{ segment.line }}</span>
+                                {% if segment.type %}
+                                <span class="type">{{ segment.type }}</span>
+                                {% endif %}
+                            </div>
+                            <div class="places">{{ segment.from }} → {{ segment.to }}</div>
+                            {% if segment.note %}
+                            <div class="note">{{ segment.note }}</div>
+                            {% endif %}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ol>
+                {% endif %}
+
                 {% if result.shortest and result.shortest.ok %}
                 {% set shortest_routes = result.shortest.routes if result.shortest.routes else [result.shortest] %}
                 <h1>最短到達ルート（{{ shortest_routes|length }}件）</h1>
@@ -132,49 +194,7 @@
                 {% endfor %}
                 {% endif %}
 
-                {% if result %}
-                {% if result.fastest and result.fastest.ok %}
-                <h1>最速到着ルート</h1>
-                <div class="summary">
-                    <div>
-                        <span>出発</span>
-                        <strong>{{ result.fastest.start_time }}</strong>
-                    </div>
-                    <div>
-                        <span>到着</span>
-                        <strong>{{ result.fastest.end_time }}</strong>
-                    </div>
-                    <div>
-                        <span>所要時間</span>
-                        <strong>{{ result.fastest.total_minutes }}分</strong>
-                    </div>
-                </div>
-
-                <ol class="timeline">
-                    {% for segment in result.fastest.segments %}
-                    <li>
-                        <div class="time">
-                            <strong>{{ segment.departure }}</strong>
-                            <span>{{ segment.arrival }}</span>
-                        </div>
-                        <div class="segment-body">
-                            <div class="line-row">
-                                <span class="line">{{ segment.line }}</span>
-                                {% if segment.type %}
-                                <span class="type">{{ segment.type }}</span>
-                                {% endif %}
-                            </div>
-                            <div class="places">{{ segment.from }} → {{ segment.to }}</div>
-                            {% if segment.note %}
-                            <div class="note">{{ segment.note }}</div>
-                            {% endif %}
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ol>
-                {% endif %}
-
-                <details class="debug">
+                <!-- <details class="debug">
                     <summary>C++側へ渡したリクエスト</summary>
                     <pre>{{ request_payload | tojson(indent=2) }}</pre>
                 </details>
@@ -182,7 +202,7 @@
                 <details class="debug">
                     <summary>検索結果のJSON</summary>
                     <pre>{{ result | tojson(indent=2) }}</pre>
-                </details>
+                </details> -->
                 {% elif not error %}
                 <div class="notice">条件を入力して検索してください。</div>
                 {% endif %}
