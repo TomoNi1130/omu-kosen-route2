@@ -14,6 +14,15 @@ logging.basicConfig(
 )
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
+FORM_FIELDS = (
+    "direction",
+    "station",
+    "service_day",
+    "transfer_min",
+    "home_walk_min",
+    "school_walk_min",
+    "now_hhmm",
+)
 
 app = Flask(
     __name__,
@@ -62,7 +71,7 @@ def parse_hhmm(text):
 
 
 def minutes_until_hhmm(time_text, base_minutes):
-    minutes = route.hhmm_to_minutes(time_text)
+    minutes = route.timetable_hhmm_to_minutes(time_text)
     while minutes < base_minutes:
         minutes += 24 * 60
     return minutes - base_minutes
@@ -78,7 +87,7 @@ def attach_next_train_wait(route_result, now_minutes):
 
         departure = segment.get("departure")
         if not departure:
-            break
+            continue
 
         route_result["next_train"] = {
             "line": segment.get("line", ""),
@@ -93,71 +102,90 @@ def attach_next_train_wait(route_result, now_minutes):
     return route_result
 
 
+def available_stations():
+    return list(route.AVAILABLE_MONO_STATIONS)
+
+
+def submitted_form(defaults, source):
+    form = defaults.copy()
+    for field in FORM_FIELDS:
+        form[field] = source.get(field, form[field])
+    return form
+
+
+def parse_search_form(form, stations):
+    if form["direction"] not in route.DIRECTIONS:
+        raise ValueError("方向の指定が不正です")
+    if form["station"] not in stations:
+        raise ValueError("モノレール駅の指定が不正です")
+    if form["service_day"] not in route.SERVICE_DAYS:
+        raise ValueError("ダイヤの指定が不正です")
+
+    return {
+        "now_minutes": parse_hhmm(form["now_hhmm"]),
+        "transfer_min": parse_non_negative_int(form, "transfer_min", "乗換時間"),
+        "home_walk_min": parse_non_negative_int(form, "home_walk_min", "自宅側の徒歩時間"),
+        "school_walk_min": parse_non_negative_int(form, "school_walk_min", "学校側の徒歩時間"),
+    }
+
+
+def build_route_request(kind, form, values):
+    return route.request(
+        kind=kind,
+        direction=form["direction"],
+        mono_station=form["station"],
+        service_day=form["service_day"],
+        **values,
+    )
+
+
+def run_searches(form, values):
+    requests = {
+        "fastest": build_route_request("fastest_arrival", form, values),
+        "shortest": build_route_request("shortest_arrival", form, values),
+    }
+    results = {
+        "fastest": route.find_route(requests["fastest"]),
+        "shortest": route.find_route(requests["shortest"]),
+    }
+    return requests, results
+
+
+def attach_waits(results, now_minutes):
+    for route_result in results.values():
+        attach_next_train_wait(route_result, now_minutes)
+
+    shortest = results.get("shortest") or {}
+    for route_result in shortest.get("routes", []):
+        attach_next_train_wait(route_result, now_minutes)
+
+
+def search_error(results):
+    fastest = results["fastest"]
+    shortest = results["shortest"]
+    if fastest.get("ok", False) or shortest.get("ok", False):
+        return None
+    return fastest.get("message") or shortest.get("message") or "経路が見つかりませんでした"
+
+
 @app.route("/", methods=["GET", "POST"])
 def index():
-    stations = [station for station in route.MONO_STATIONS if station != "門真市"]
+    stations = available_stations()
     form = default_form()
-    search_request_fastest = None
-    search_request_shortest = None
+    search_requests = {"fastest": None, "shortest": None}
     result = None
     error = None
 
     if request.method == "POST":
-        form.update(
-            {
-                "direction": request.form.get("direction", form["direction"]),
-                "station": request.form.get("station", form["station"]),
-                "service_day": request.form.get("service_day", form["service_day"]),
-                "transfer_min": request.form.get("transfer_min", form["transfer_min"]),
-                "home_walk_min": request.form.get("home_walk_min", form["home_walk_min"]),
-                "school_walk_min": request.form.get("school_walk_min", form["school_walk_min"]),
-                "now_hhmm": request.form.get("now_hhmm", form["now_hhmm"]),
-            }
-        )
-
+        form = submitted_form(form, request.form)
         try:
-            now_minutes = parse_hhmm(form["now_hhmm"])
-            transfer_min = parse_non_negative_int(form, "transfer_min", "乗換時間")
-            home_walk_min = parse_non_negative_int(form, "home_walk_min", "自宅側の徒歩時間")
-            school_walk_min = parse_non_negative_int(form, "school_walk_min", "学校側の徒歩時間")
+            values = parse_search_form(form, stations)
+            search_requests, result = run_searches(form, values)
+            attach_waits(result, values["now_minutes"])
 
-            # 最速到着と最短到達の両方を実行して表示する
-            search_request_fastest = route.request(
-                kind="fastest_arrival",
-                direction=form["direction"],
-                mono_station=form["station"],
-                now_minutes=now_minutes,
-                transfer_min=transfer_min,
-                home_walk_min=home_walk_min,
-                school_walk_min=school_walk_min,
-                service_day=form["service_day"],
-            )
-            search_request_shortest = route.request(
-                kind="shortest_arrival",
-                direction=form["direction"],
-                mono_station=form["station"],
-                now_minutes=now_minutes,
-                transfer_min=transfer_min,
-                home_walk_min=home_walk_min,
-                school_walk_min=school_walk_min,
-                service_day=form["service_day"],
-            )
-
-            res_fastest = route.find_route(search_request_fastest)
-            res_shortest = route.find_route(search_request_shortest)
-
-            attach_next_train_wait(res_fastest, now_minutes)
-            attach_next_train_wait(res_shortest, now_minutes)
-            if res_shortest.get("routes"):
-                for route_result in res_shortest["routes"]:
-                    attach_next_train_wait(route_result, now_minutes)
-
-            # エラーハンドリング: 両方失敗したらエラー表示
-            if not res_fastest.get("ok", False) and not res_shortest.get("ok", False):
-                # 優先して fast のメッセージを表示、なければ short のメッセージ
-                error = res_fastest.get("message") or res_shortest.get("message") or "経路が見つかりませんでした"
-            else:
-                result = {"fastest": res_fastest, "shortest": res_shortest}
+            error = search_error(result)
+            if error:
+                result = None
         except Exception as exc:
             logging.exception("route search failed")
             error = f"検索中にエラーが発生しました: {exc}"
@@ -171,7 +199,7 @@ def index():
             ("weekend", "土日"),
         ],
         form=form,
-        request_payload={"fastest": search_request_fastest, "shortest": search_request_shortest},
+        request_payload=search_requests,
         result=result,
         error=error,
     )
@@ -179,6 +207,6 @@ def index():
 
 if __name__ == "__main__":
     route.ensure_cpp_core_built(required=False)
-    host = os.environ.get("FLASK_RUN_HOST", "127.0.0.1")
-    port = int(os.environ.get("FLASK_RUN_PORT", "5001"))
+    host = os.environ.get("FLASK_RUN_HOST", "0.0.0.0")
+    port = int(os.environ.get("FLASK_RUN_PORT", "10071"))
     app.run(debug=True, host=host, port=port)

@@ -385,8 +385,7 @@ def _empty_monorail_to_kadoma_payload(service_day, service_date):
     return payload
 
 
-def build_monorail_to_kadoma_station(station, service_day, service_date):
-    """指定駅から門真市方面へ向かう列車の門真市到着時刻だけを追記生成する。"""
+def _build_monorail_to_kadoma_station_rows(station, service_date):
     if station not in MONO_STATIONS:
         raise ValueError(f"未知の駅名: {station}")
     if station == "門真市":
@@ -408,6 +407,12 @@ def build_monorail_to_kadoma_station(station, service_day, service_date):
         _with_time_fields(row, ("kadoma_arrival", kadoma_arrival))
         rows.append(row)
 
+    return source_url, rows
+
+
+def build_monorail_to_kadoma_station(station, service_day, service_date):
+    """指定駅から門真市方面へ向かう列車の門真市到着時刻だけを追記生成する。"""
+    source_url, rows = _build_monorail_to_kadoma_station_rows(station, service_date)
     output_path = _path_for_service_day(MONORAIL_TO_KADOMA_PATH, service_day)
     payload = _load_json(output_path, _empty_monorail_to_kadoma_payload(service_day, service_date))
     payload.update(
@@ -426,6 +431,23 @@ def build_monorail_to_kadoma_station(station, service_day, service_date):
         "source_url": source_url,
         "trains": rows,
     }
+    _write_json(output_path, payload)
+    return payload
+
+
+def build_monorail_to_kadoma_all_stations(service_day, service_date):
+    """門真市以外の全モノレール駅から門真市方面へのキャッシュを生成する。"""
+    payload = _empty_monorail_to_kadoma_payload(service_day, service_date)
+    for station in MONO_STATIONS[:-1]:
+        source_url, rows = _build_monorail_to_kadoma_station_rows(station, service_date)
+        payload["by_station"][station] = {
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "source_url": source_url,
+            "trains": rows,
+        }
+
+    output_path = _path_for_service_day(MONORAIL_TO_KADOMA_PATH, service_day)
+    payload["generated_at"] = datetime.now(timezone.utc).isoformat()
     _write_json(output_path, payload)
     return payload
 
@@ -550,6 +572,7 @@ def build_keihan_kadoma_to_neyagawa(service_day, service_date):
 def build_all_caches(service_day, service_date):
     builders = [
         (MONORAIL_STOP_TIMES_PATH, build_monorail_stop_times),
+        (MONORAIL_TO_KADOMA_PATH, build_monorail_to_kadoma_all_stations),
         (KEIHAN_NEYAGAWA_TO_KADOMA_PATH, build_keihan_neyagawa_to_kadoma),
         (KEIHAN_KADOMA_TO_NEYAGAWA_PATH, build_keihan_kadoma_to_neyagawa),
     ]
@@ -595,7 +618,10 @@ def main():
     )
     parser.add_argument("--weekday-date", help="平日ダイヤ取得に使う日付 YYYYMMDD。未指定なら次の月曜")
     parser.add_argument("--weekend-date", help="土日ダイヤ取得に使う日付 YYYYMMDD。未指定なら次の土曜")
-    parser.add_argument("--mono-station", help="--only mono-to-kadoma のときに生成する大阪モノレール駅名")
+    parser.add_argument(
+        "--mono-station",
+        help="--only mono-to-kadoma のときに生成する大阪モノレール駅名。未指定なら全駅分を生成します",
+    )
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
 
@@ -614,12 +640,14 @@ def main():
             output_path = _path_for_service_day(MONORAIL_STOP_TIMES_PATH, service_day)
             outputs.append({"path": str(output_path), "count": _payload_count(payload)})
         elif args.only == "mono-to-kadoma":
-            if not args.mono_station:
-                parser.error("--only mono-to-kadoma では --mono-station が必要です")
-            payload = build_monorail_to_kadoma_station(args.mono_station, service_day, service_date)
-            station_rows = payload["by_station"][args.mono_station]["trains"]
+            if args.mono_station:
+                payload = build_monorail_to_kadoma_station(args.mono_station, service_day, service_date)
+                count = len(payload["by_station"][args.mono_station]["trains"])
+            else:
+                payload = build_monorail_to_kadoma_all_stations(service_day, service_date)
+                count = _payload_count(payload)
             output_path = _path_for_service_day(MONORAIL_TO_KADOMA_PATH, service_day)
-            outputs.append({"path": str(output_path), "count": len(station_rows)})
+            outputs.append({"path": str(output_path), "count": count})
         elif args.only == "keihan-to-kadoma":
             payload = build_keihan_neyagawa_to_kadoma(service_day, service_date)
             output_path = _path_for_service_day(KEIHAN_NEYAGAWA_TO_KADOMA_PATH, service_day)

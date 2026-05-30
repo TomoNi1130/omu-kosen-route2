@@ -1,6 +1,8 @@
 import json
 import logging
 import os
+import re
+import shlex
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -12,6 +14,9 @@ BUILD_DIR = ROOT_DIR / "build"
 CPP_SOURCE = ROOT_DIR / "src" / "route_core.cpp"
 CMAKE_FILE = ROOT_DIR / "CMakeLists.txt"
 logger = logging.getLogger(__name__)
+
+ROUTE_KINDS = {"fastest_arrival", "shortest_arrival"}
+DIRECTIONS = {"to_home", "from_home"}
 
 MONO_STATIONS = [
     "大阪空港",
@@ -30,7 +35,9 @@ MONO_STATIONS = [
     "門真市",
 ]
 
+AVAILABLE_MONO_STATIONS = tuple(station for station in MONO_STATIONS if station != "門真市")
 SERVICE_DAYS = {"auto", "weekday", "weekend"}
+HHMM_RE = re.compile(r"^(\d{1,2}):(\d{2})$")
 
 
 def _route_core_outputs():
@@ -119,9 +126,31 @@ def minutes_to_hhmm(minutes):
     return f"{(minutes // 60) % 24:02d}:{minutes % 60:02d}"
 
 
+def _parse_hhmm_parts(text):
+    if not isinstance(text, str):
+        raise ValueError("時刻は HH:MM 形式で入力してください")
+    match = HHMM_RE.fullmatch(text.strip())
+    if not match:
+        raise ValueError("時刻は HH:MM 形式で入力してください")
+    hour = int(match.group(1))
+    minute = int(match.group(2))
+    if minute > 59:
+        raise ValueError("時刻の分は 00 から 59 の範囲で入力してください")
+    return hour, minute
+
+
 def hhmm_to_minutes(text):
-    hour, minute = text.split(":")
-    return int(hour) * 60 + int(minute)
+    hour, minute = _parse_hhmm_parts(text)
+    if hour > 23:
+        raise ValueError("時刻の時は 00 から 23 の範囲で入力してください")
+    return hour * 60 + minute
+
+
+def timetable_hhmm_to_minutes(text):
+    hour, minute = _parse_hhmm_parts(text)
+    if hour > 47:
+        raise ValueError("時刻の時は 00 から 47 の範囲で入力してください")
+    return hour * 60 + minute
 
 
 def service_day_for_datetime(dt):
@@ -134,6 +163,33 @@ def normalize_service_day(service_day, now=None):
     if service_day != "auto":
         return service_day
     return service_day_for_datetime(now or datetime.now())
+
+
+def _validate_request_params(
+    kind,
+    direction,
+    mono_station,
+    now_minutes,
+    transfer_min,
+    home_walk_min,
+    school_walk_min,
+):
+    if kind not in ROUTE_KINDS:
+        raise ValueError("kind は fastest_arrival / shortest_arrival のいずれかです")
+    if direction not in DIRECTIONS:
+        raise ValueError("direction は to_home / from_home のいずれかです")
+    if mono_station not in AVAILABLE_MONO_STATIONS:
+        raise ValueError("モノレール駅の指定が不正です")
+
+    values = {
+        "now_minutes": now_minutes,
+        "transfer_min": transfer_min,
+        "home_walk_min": home_walk_min,
+        "school_walk_min": school_walk_min,
+    }
+    for name, value in values.items():
+        if not isinstance(value, int) or value < 0:
+            raise ValueError(f"{name} は0以上の整数で指定してください")
 
 
 def request(
@@ -149,9 +205,18 @@ def request(
     """C++側へ渡すリクエストを1か所で作る。
 
     C++側は、まずこの辞書を受け取れるようにするとPython画面とつながります。
-    pybind11なら route_core.find_fastest_arrival(request_dict)、
-    実行ファイルなら標準入力にこのJSONを流す想定です。
+    pybind11なら route_core.find_route(request_dict)、実行ファイルなら
+    標準入力にこのJSONを流す想定です。
     """
+    _validate_request_params(
+        kind,
+        direction,
+        mono_station,
+        now_minutes,
+        transfer_min,
+        home_walk_min,
+        school_walk_min,
+    )
     resolved_service_day = normalize_service_day(service_day)
     return {
         "kind": kind,
@@ -170,7 +235,7 @@ def find_route(request):
     """C++検索エンジンへ依頼し、画面用の辞書を受け取る。
 
     優先順位:
-      1. pybind11 モジュール route_core.find_fastest_arrival(request)
+      1. pybind11 モジュール route_core.find_route(request)
       2. 環境変数 ROUTE_CORE_COMMAND の外部コマンド
       3. Pythonの簡易フォールバック
     """
@@ -178,7 +243,7 @@ def find_route(request):
         try:
             import route_core
 
-            return route_core.find_route(request) #cppへリクエスト
+            return route_core.find_route(request)
         except ImportError as exc:
             logger.warning("route_core import failed after build: %s", exc)
 
@@ -191,7 +256,7 @@ def find_route(request):
 
 def _call_route_core_command(command, request):
     completed = subprocess.run(
-        command.split(),
+        shlex.split(command),
         input=json.dumps(request, ensure_ascii=False),
         text=True,
         capture_output=True,
@@ -245,8 +310,7 @@ def _load_monorail_to_kadoma_cache(service_day, station):
 
 
 def _time_to_minutes(text):
-    hour, minute = text.split(":")
-    return int(hour) * 60 + int(minute)
+    return timetable_hhmm_to_minutes(text)
 
 
 def _after_or_equal(time_text, base_minutes):

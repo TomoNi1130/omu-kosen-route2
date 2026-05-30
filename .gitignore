@@ -5,3 +5,8 @@
 /.vscode
 /build
 /compile_commands.json
+__pycache__/
+*.py[cod]
+*.so
+/src/route_core*.so
+/data/cache/*.json
