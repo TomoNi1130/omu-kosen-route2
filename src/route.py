@@ -269,6 +269,42 @@ def _cache_path(name, service_day):
     return CACHE_DIR / f"{name}_{service_day}.json"
 
 
+def _require_keys(mapping, keys, label):
+    missing = [key for key in keys if key not in mapping]
+    if missing:
+        raise ValueError(f"{label} の必須項目が不足しています: {', '.join(missing)}")
+
+
+def _validate_train_rows(rows, required_keys, label):
+    if not isinstance(rows, list) or not rows:
+        raise ValueError(f"{label} に利用可能な列車データがありません")
+    for index, train in enumerate(rows, start=1):
+        if not isinstance(train, dict):
+            raise ValueError(f"{label} の {index} 件目が不正です")
+        _require_keys(train, required_keys, f"{label} の {index} 件目")
+
+
+def _validate_route_cache(name, data):
+    if not isinstance(data, dict):
+        raise ValueError(f"{name} キャッシュの形式が不正です")
+    _require_keys(data, ["schema_version", "service_day"], f"{name} キャッシュ")
+
+    if name == "osaka_monorail_to_kadoma":
+        by_station = data.get("by_station")
+        if not isinstance(by_station, dict) or not by_station:
+            raise ValueError(f"{name} キャッシュに駅別データがありません")
+        for station, station_data in by_station.items():
+            if not isinstance(station_data, dict):
+                raise ValueError(f"{name} キャッシュの {station} が不正です")
+            _validate_train_rows(station_data.get("trains"), ["departure", "kadoma_arrival", "type"], f"{station} -> 門真市")
+        return
+
+    required = ["departure", "type"]
+    if name == "osaka_monorail_stop_times":
+        required.append("stops")
+    _validate_train_rows(data.get("trains"), required, name)
+
+
 def _generate_cache(name, service_day, mono_station=None):
     import generate_timetable_cache as generator
 
@@ -292,7 +328,9 @@ def _load_cache(name, service_day):
     if not path.exists() or path.stat().st_size == 0:
         _generate_cache(name, service_day)
     with path.open(encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    _validate_route_cache(name, data)
+    return data
 
 
 def _load_monorail_to_kadoma_cache(service_day, station):
@@ -306,6 +344,7 @@ def _load_monorail_to_kadoma_cache(service_day, station):
         _generate_cache(name, service_day, station)
         with path.open(encoding="utf-8") as f:
             data = json.load(f)
+    _validate_route_cache(name, data)
     return data
 
 
@@ -314,10 +353,14 @@ def _time_to_minutes(text):
 
 
 def _after_or_equal(time_text, base_minutes):
+    return _departure_minutes_for_base(time_text, base_minutes) >= base_minutes
+
+
+def _departure_minutes_for_base(time_text, base_minutes):
     minutes = _time_to_minutes(time_text)
     if minutes < 180 and base_minutes > 1200:
         minutes += 24 * 60
-    return minutes >= base_minutes
+    return minutes
 
 
 def _find_first_after(trains, key, base_minutes):
@@ -329,7 +372,7 @@ def _find_first_after(trains, key, base_minutes):
 
 def _arrival_minutes(time_text, departure_base):
     minutes = _time_to_minutes(time_text)
-    if minutes < departure_base % (24 * 60):
+    while minutes < departure_base:
         minutes += 24 * 60
     return minutes
 
@@ -384,8 +427,7 @@ def _keihan_segments(train, origin, target):
 
 
 def _fallback_find_route(request):
-    """C++が未接続の間だけ使う簡易実装。
-    """
+    """C++が未接続の間だけ使う実装。C++側との一致をテストで守る。"""
     direction = request["direction"]
     station = request["mono_station"]
     service_day = request["service_day"]
@@ -399,25 +441,43 @@ def _fallback_find_route(request):
 
 
 def _fallback_to_home(request, station, service_day, now):
+    keihan = _load_cache("keihan_neyagawa_to_kadoma", service_day)["trains"]
+    mono = _load_cache("osaka_monorail_stop_times", service_day)["trains"]
+
+    if request["kind"] == "shortest_arrival":
+        routes = []
+        best = None
+        for keihan_train in keihan:
+            keihan_departure = _departure_minutes_for_base(keihan_train["departure"], now)
+            start_minutes = keihan_departure - request["school_walk_min"]
+            candidate = _build_to_home_route(request, station, mono, keihan_train, start_minutes)
+            best, routes = _collect_shortest_route(best, routes, candidate)
+        return _shortest_response(best, routes)
+
     school_departure = now
     neyagawa_ready = school_departure + request["school_walk_min"]
-
-    keihan = _load_cache("keihan_neyagawa_to_kadoma", service_day)["trains"]
     keihan_train = _find_first_after(keihan, "departure", neyagawa_ready)
     if not keihan_train:
         return {"ok": False, "message": "利用できる京阪電車が見つかりませんでした"}
+    result = _build_to_home_route(request, station, mono, keihan_train, school_departure)
+    return result or {"ok": False, "message": "利用できるモノレールが見つかりませんでした"}
+
+
+def _build_to_home_route(request, station, mono_trains, keihan_train, school_departure):
+    neyagawa_ready = school_departure + request["school_walk_min"]
+    keihan_departure = _departure_minutes_for_base(keihan_train["departure"], neyagawa_ready)
+    if keihan_departure < neyagawa_ready:
+        return None
 
     kadoma_arrival_text = _keihan_arrival(keihan_train, "門真市")
-    kadoma_ready = _arrival_minutes(kadoma_arrival_text, neyagawa_ready) + request["transfer_min"]
-
-    mono = _load_cache("osaka_monorail_stop_times", service_day)["trains"]
-    mono_train = _find_first_after(mono, "departure", kadoma_ready)
+    kadoma_ready = _arrival_minutes(kadoma_arrival_text, keihan_departure) + request["transfer_min"]
+    mono_train = _find_first_after(mono_trains, "departure", kadoma_ready)
     if not mono_train or not mono_train["stops"].get(station):
-        return {"ok": False, "message": "利用できるモノレールが見つかりませんでした"}
+        return None
 
+    mono_departure = _departure_minutes_for_base(mono_train["departure"], kadoma_ready)
     mono_arrival_text = mono_train["stops"][station]
-    end_minutes = _arrival_minutes(mono_arrival_text, kadoma_ready) + request["home_walk_min"]
-
+    end_minutes = _arrival_minutes(mono_arrival_text, mono_departure) + request["home_walk_min"]
     segments = [
         {
             "mode": "walk",
@@ -455,27 +515,47 @@ def _fallback_to_home(request, station, service_day, now):
 
 
 def _fallback_from_home(request, station, service_day, now):
-    home_departure = now
-    station_ready = home_departure + request["home_walk_min"]
-
     mono_data = _load_monorail_to_kadoma_cache(service_day, station)
     by_station = mono_data.get("by_station", {})
     if station not in by_station:
         return {"ok": False, "message": f"{station} -> 門真市 のモノレールキャッシュがありません"}
 
-    mono_train = _find_first_after(by_station[station]["trains"], "departure", station_ready)
+    mono_trains = by_station[station]["trains"]
+    keihan = _load_cache("keihan_kadoma_to_neyagawa", service_day)["trains"]
+
+    if request["kind"] == "shortest_arrival":
+        routes = []
+        best = None
+        for mono_train in mono_trains:
+            mono_departure = _departure_minutes_for_base(mono_train["departure"], now)
+            start_minutes = mono_departure - request["home_walk_min"]
+            candidate = _build_from_home_route(request, station, keihan, mono_train, start_minutes)
+            best, routes = _collect_shortest_route(best, routes, candidate)
+        return _shortest_response(best, routes)
+
+    home_departure = now
+    station_ready = home_departure + request["home_walk_min"]
+    mono_train = _find_first_after(mono_trains, "departure", station_ready)
     if not mono_train:
         return {"ok": False, "message": "利用できるモノレールが見つかりませんでした"}
+    result = _build_from_home_route(request, station, keihan, mono_train, home_departure)
+    return result or {"ok": False, "message": "利用できる京阪電車が見つかりませんでした"}
 
-    kadoma_ready = _arrival_minutes(mono_train["kadoma_arrival"], station_ready) + request["transfer_min"]
 
-    keihan = _load_cache("keihan_kadoma_to_neyagawa", service_day)["trains"]
-    keihan_train = _find_first_after(keihan, "departure", kadoma_ready)
+def _build_from_home_route(request, station, keihan_trains, mono_train, home_departure):
+    station_ready = home_departure + request["home_walk_min"]
+    mono_departure = _departure_minutes_for_base(mono_train["departure"], station_ready)
+    if mono_departure < station_ready:
+        return None
+
+    kadoma_ready = _arrival_minutes(mono_train["kadoma_arrival"], mono_departure) + request["transfer_min"]
+    keihan_train = _find_first_after(keihan_trains, "departure", kadoma_ready)
     if not keihan_train:
-        return {"ok": False, "message": "利用できる京阪電車が見つかりませんでした"}
+        return None
 
     neyagawa_arrival_text = _keihan_arrival(keihan_train, "寝屋川市")
-    end_minutes = _arrival_minutes(neyagawa_arrival_text, kadoma_ready) + request["school_walk_min"]
+    keihan_departure = _departure_minutes_for_base(keihan_train["departure"], kadoma_ready)
+    end_minutes = _arrival_minutes(neyagawa_arrival_text, keihan_departure) + request["school_walk_min"]
 
     segments = [
         {
@@ -511,6 +591,41 @@ def _fallback_from_home(request, station, service_day, now):
         },
     ]
     return _route_response("自宅", "学校", home_departure, end_minutes, segments, "python_fallback")
+
+
+def _route_duration(route_result):
+    return route_result["total_minutes"]
+
+
+def _is_better_shortest(candidate, best):
+    if best is None:
+        return True
+    if _route_duration(candidate) != _route_duration(best):
+        return _route_duration(candidate) < _route_duration(best)
+    if candidate["end_time"] != best["end_time"]:
+        return candidate["end_time"] < best["end_time"]
+    return candidate["start_time"] < best["start_time"]
+
+
+def _collect_shortest_route(best, routes, candidate):
+    if not candidate or not candidate.get("ok"):
+        return best, routes
+    if best is None or _route_duration(candidate) < _route_duration(best):
+        return candidate, [candidate]
+    if _route_duration(candidate) == _route_duration(best):
+        routes.append(candidate)
+        if _is_better_shortest(candidate, best):
+            best = candidate
+    return best, routes
+
+
+def _shortest_response(best, routes):
+    if best is None:
+        return {"ok": False, "message": "利用できる経路が見つかりませんでした"}
+    response = dict(best)
+    response["routes"] = routes
+    response["route_count"] = len(routes)
+    return response
 
 
 def _route_response(origin, destination, start_minutes, end_minutes, segments, engine):

@@ -99,7 +99,44 @@ def _save_cache():
     os.replace(tmp_path, RAW_CACHE_PATH)
 
 
+def _require_keys(mapping, keys, label):
+    missing = [key for key in keys if key not in mapping]
+    if missing:
+        raise ValueError(f"{label} の必須項目が不足しています: {', '.join(missing)}")
+
+
+def _validate_train_rows(rows, required_keys, label):
+    if not isinstance(rows, list) or not rows:
+        raise ValueError(f"{label} に列車データがありません。取得元HTMLの構造が変わった可能性があります")
+    for index, train in enumerate(rows, start=1):
+        if not isinstance(train, dict):
+            raise ValueError(f"{label} の {index} 件目が不正です")
+        _require_keys(train, required_keys, f"{label} の {index} 件目")
+        if train.get("route") == "transfer_at_kayashima" and not isinstance(train.get("transfer_train"), dict):
+            raise ValueError(f"{label} の {index} 件目に乗換列車がありません")
+
+
+def _validate_generated_payload(path, payload):
+    _require_keys(payload, ["schema_version", "generated_at", "service_day"], path.name)
+
+    if "by_station" in payload:
+        by_station = payload["by_station"]
+        if not isinstance(by_station, dict) or not by_station:
+            raise ValueError(f"{path.name} に駅別データがありません")
+        for station, station_data in by_station.items():
+            if not isinstance(station_data, dict):
+                raise ValueError(f"{path.name} の {station} が不正です")
+            _validate_train_rows(station_data.get("trains"), ["departure", "type", "kadoma_arrival"], f"{path.name} {station}")
+        return
+
+    required = ["departure", "type"]
+    if path.name.startswith("osaka_monorail_stop_times"):
+        required.append("stops")
+    _validate_train_rows(payload.get("trains"), required, path.name)
+
+
 def _write_json(path, payload):
+    _validate_generated_payload(path, payload)
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     tmp_path = path.with_suffix(".tmp")
     with tmp_path.open("w", encoding="utf-8") as f:

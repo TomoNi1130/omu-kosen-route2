@@ -110,7 +110,25 @@ pybind11::dict load_required_caches_from (const pybind11::dict &request) {
 }
 
 int parse_time_to_minutes (const std::string &time_str) {
-  return std::stoi (time_str.substr (0, 2)) * 60 + std::stoi (time_str.substr (3, 2));
+  const std::size_t colon_pos = time_str.find (':');
+  if (colon_pos == std::string::npos || colon_pos == 0 || colon_pos + 1 >= time_str.size () || time_str.size () - colon_pos - 1 != 2) {
+    throw std::runtime_error ("invalid time format: " + time_str);
+  }
+
+  const std::string hour_text = time_str.substr (0, colon_pos);
+  const std::string minute_text = time_str.substr (colon_pos + 1);
+  for (char c : hour_text + minute_text) {
+    if (c < '0' || c > '9') {
+      throw std::runtime_error ("invalid time format: " + time_str);
+    }
+  }
+
+  const int hour = std::stoi (hour_text);
+  const int minute = std::stoi (minute_text);
+  if (hour < 0 || hour > 47 || minute < 0 || minute > 59) {
+    throw std::runtime_error ("invalid time value: " + time_str);
+  }
+  return hour * 60 + minute;
 }
 
 std::string minutes_to_hhmm (int minutes) {

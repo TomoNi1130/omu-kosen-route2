@@ -31,6 +31,8 @@ python3 scripts/setup_project.py
 FLASK_RUN_HOST=127.0.0.1 FLASK_RUN_PORT=5001 .venv/bin/python src/app.py
 ```
 
+デバッグ表示を有効にする場合だけ `ROUTE_DEBUG=1` または `FLASK_DEBUG=1` を指定します。
+
 ## 個別キャッシュ生成
 
 ```bash
@@ -42,6 +44,8 @@ FLASK_RUN_HOST=127.0.0.1 FLASK_RUN_PORT=5001 .venv/bin/python src/app.py
 ```bash
 .venv/bin/python src/generate_timetable_cache.py --only mono-to-kadoma --service-day both
 ```
+
+時刻表キャッシュは外部サイトから生成します。取得結果が空、必須項目が不足、乗換列車が見つからない場合は、壊れたJSONを保存せずエラーで停止します。
 
 ## テスト
 

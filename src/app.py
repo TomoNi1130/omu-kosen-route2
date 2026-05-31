@@ -168,6 +168,13 @@ def search_error(results):
     return fastest.get("message") or shortest.get("message") or "経路が見つかりませんでした"
 
 
+def env_flag(name, default=False):
+    value = os.environ.get(name)
+    if value is None:
+        return default
+    return value.lower() in {"1", "true", "yes", "on"}
+
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     stations = available_stations()
@@ -186,9 +193,14 @@ def index():
             error = search_error(result)
             if error:
                 result = None
+        except ValueError as exc:
+            error = str(exc)
         except Exception as exc:
             logging.exception("route search failed")
-            error = f"検索中にエラーが発生しました: {exc}"
+            if env_flag("FLASK_DEBUG") or env_flag("ROUTE_DEBUG"):
+                error = f"検索中にエラーが発生しました: {exc}"
+            else:
+                error = "検索中にエラーが発生しました。キャッシュや時刻表データを確認してください。"
 
     return render_template(
         "index.html",
@@ -209,4 +221,5 @@ if __name__ == "__main__":
     route.ensure_cpp_core_built(required=False)
     host = os.environ.get("FLASK_RUN_HOST", "0.0.0.0")
     port = int(os.environ.get("FLASK_RUN_PORT", "10071"))
-    app.run(debug=True, host=host, port=port)
+    debug = env_flag("FLASK_DEBUG") or env_flag("ROUTE_DEBUG")
+    app.run(debug=debug, host=host, port=port)

@@ -1,5 +1,5 @@
-Flask
-pybind11
-requests
-beautifulsoup4
-pytest
+Flask==3.1.3
+beautifulsoup4==4.14.3
+pybind11==3.0.4
+pytest==9.0.3
+requests==2.34.2
