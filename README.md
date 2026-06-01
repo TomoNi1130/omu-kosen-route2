@@ -25,7 +25,7 @@ python3 scripts/setup_project.py
 .venv/bin/python src/app.py
 ```
 
-既定では `0.0.0.0:10071` で起動します。変更する場合は環境変数を使います。
+既定では `0.0.0.0:10071` で待ち受けます。同じネットワーク内の端末からは、このPCに割り当てられたIPアドレスとポート番号でアクセスします。
 
 ```bash
 FLASK_RUN_HOST=127.0.0.1 FLASK_RUN_PORT=5001 .venv/bin/python src/app.py

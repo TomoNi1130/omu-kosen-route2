@@ -219,7 +219,7 @@ def index():
 
 if __name__ == "__main__":
     route.ensure_cpp_core_built(required=False)
-    host = os.environ.get("FLASK_RUN_HOST", "0.0.0.0")
-    port = int(os.environ.get("FLASK_RUN_PORT", "10071"))
+    host = "10.133.2.200"
+    port = 11071
     debug = env_flag("FLASK_DEBUG") or env_flag("ROUTE_DEBUG")
     app.run(debug=debug, host=host, port=port)

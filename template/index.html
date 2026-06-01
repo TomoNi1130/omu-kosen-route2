@@ -51,9 +51,12 @@
                         </select>
                     </label>
 
-                    <label>
+                    <label class="time-field">
                         出発時刻
-                        <input type="time" name="now_hhmm" value="{{ form.now_hhmm }}" required>
+                        <span class="time-controls">
+                            <input type="time" name="now_hhmm" value="{{ form.now_hhmm }}" required>
+                            <button type="button" class="secondary-button" data-current-time-button>現在時刻</button>
+                        </span>
                     </label>
 
                     <label>
@@ -209,6 +212,18 @@
             </div>
         </section>
     </main>
+    <script>
+        const currentTimeButton = document.querySelector("[data-current-time-button]");
+        const timeInput = document.querySelector('input[name="now_hhmm"]');
+
+        currentTimeButton?.addEventListener("click", () => {
+            const now = new Date();
+            const hh = String(now.getHours()).padStart(2, "0");
+            const mm = String(now.getMinutes()).padStart(2, "0");
+            timeInput.value = `${hh}:${mm}`;
+            timeInput.focus();
+        });
+    </script>
 </body>
 
 </html>
